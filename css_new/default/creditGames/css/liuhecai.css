@@ -1,0 +1,493 @@
+body, div, ul, li, span, input, h2 ,form{ margin: 0; padding: 0; }
+a { text-decoration: none; }
+li { list-style: none; }
+input { text-align: center; vertical-align: middle;outline:none }
+input[type=button]{cursor: pointer;}
+
+
+.clear_fix:before, .clear_fix:after { content: ""; display: table; }
+.clear_fix:after { clear: both; }
+.clear_fix { zoom: 1; clear: both; }
+
+@media screen and (max-device-width:480px){
+    input[type="button"],input[type="submit"],input[type="reset"]{-webkit-appearance:none;}
+    }
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    input[type="button"],input[type="submit"],input[type="reset"]{/*-webkit-appearance:none;*/}
+}
+
+
+.ball_info li, .content li, .content .ball_box { float: left; }
+.ball_info{height:45px;width:100%;position:relative;}
+.ball_info ul{padding:2px 0 0 2px;height:44px;position:relative;}
+.ball_info li{width:auto;}
+.ball_info li a {display:inline-block;*display:inline;*zoom:1;font-size:14px;padding:0;padding:0 18px 0 17px;height:43px;line-height:43px;text-align:center;}
+.ball_info li.curr a{}
+/*.content .openinfo { width:100%;height:27px; line-height:27px;padding:0;overflow:hidden;padding:0 0 3px 0;position:relative;}
+.content .openinfo span{height:27px;line-height:27px;}*/
+.content .sumBtn_wrap{ height:45px;overflow:hidden;}
+.content .sumBtn_wrap input{float:left;padding:0 3px;height:24px;margin:1px 0 0 0;}
+.content .sumBtn_wrap .btn_red{width:60px;height:23px;padding:0;border:none;margin:11px 3px;}
+.content .sumBtn_wrap .live{display:inline-block;*zoom:1;*display:inline;line-height:23px;margin:11px 5px;padding:0 10px 0 30px;}
+/*.content .sumBtn_wrap .live:hover{color:#1491c1;}*/
+
+.gamePlay{position:absolute;right:0;top:0;}
+.gamePlay a{display:block;width:101px;height:32px;margin-top:7px;}
+
+.BonusPercen,.Bonus,.buyBonus {float:left;}
+.buyBonus{padding:5px 0px 5px 35px;/*margin:0 0 0 15px;*/}
+.buyBonus a{float:left;width:15px;height:15px;margin:11px 7px;}
+.BonusPercen{line-height:38px;width:45px;text-align:right}
+.Bonus{height:32px;padding:3px 0;}
+.content .Bonus span{height:16px;display:block;line-height:16px;text-align:center;float:none;}
+.ranger{float:left;width:167px;height:26px;margin: 6px 0 0 0;display:inline;}
+.ranger .ui-widget{/*width:100%;*/padding:0 16px;height:100%;position:relative;}
+.ranger .ui-handle{display:inline-block;*zoom:1;width:32px;height:100%;position:absolute;top:1px;}
+
+.content .drawNumber {/*float: left;*/font-weight:700;padding-left:10px}
+.content .drawNumber span{margin:0 10px;font-size:14px;}
+.content .drawNumber i{font-style:normal;}
+.content .drawNumber button{height:24px;line-height:18px;padding:0 5px;margin:1px 0;width:auto;height:23px;line-height:20px;border:none;margin-top:2px;border-radius:4px}
+.c-period{}
+.content .now_time { /*background: url(/Content/default/images/ico.gif?7aa17f2) no-repeat 0 -88px; float: right; font-weight: bold; padding-left:20px; width: 160px; */display:none;}
+.content { width:100%;float:left;}
+.TeA,.TeB,.toradora_bar,.Drawn,.ExtraDrawn{width:900px;}
+.Drawn,.ExtraDrawn{height:489px;}
+.TeB,.Drawn,.ExtraDrawn{}
+.toradora_bar{float:none;position:relative;z-index:3;}
+.border_001,.ball{ width:47px;}
+.ball_m {width:26%;}
+.border_002,.odds {width: 29%;font-weight:bold;}
+.odds-update{}
+.border_003,.amount_pane{ width:41%;}
+.content .amount_pane{ padding-top:7px; height: 26px;}
+li:first-child .bd{border-left:none;}
+li:last-child .bd{border-right:none;}
+.txt_section1 li.btn_ok .bd{height:36px;padding-left:1px; }
+
+
+.content .main_txt{ width: 100%;}
+.content span { display: inline; float: left;text-align: center;height:36px;line-height:36px;}
+.content li, .content .btn_ok{overflow: hidden; font-size: 12px; }
+.content .btn{margin:0 0 0 15px;width:65px;height:24px;border:none;padding:0;}
+.content li .ball{font-size:14px;font-family:simhei}
+.content li .ball_m {font-size:12px;font-weight:700;font-weight:bold;}
+.odds{font-size:12px;}
+
+
+.content .ball_box .ball{padding:0;margin:0;}
+.content ul .amount { width: 63px; height:17px;line-height:17px\9; border:none; padding:2px 0;}
+
+
+.s1_nav {height:18px;line-height:18px;padding:7px 0; position:relative;overflow:hidden;}
+.s1_nav li {height:18px; overflow:hidden;width:20%;background:none;}
+.s1_nav span {line-height: 18px;height:19px;position:relative;font-size:12px;font-weight:bold;}
+
+i.nav_bg{position:absolute;width:2px;height:27px;display:block;top:0;z-index:3;}
+.toradora i.nav_bg{height:22px;}
+i.fl_nav_bg{left:0;}
+i.fr_nav_bg{right:0;}
+
+
+.btn_white,.btn_red{ float:left;margin: 2px 0px 0 10px; _margin:1px 4px 0 4px;display:inline; height:24px;padding:0 0 4px 0;text-align:center;overflow:hidden;border:none;overflow:hidden;}
+.btn_red{width:56px;}
+.btn_white{width:52px;}
+.txt_section2{height:11px;margin-right:1px;}
+.TeA .txt_section2{border-right:none;}
+.content .txt_section1 li{width:20%;*width:179px;}
+.content .txt_section3 li{width:20%;}
+.content .hx_txt li{width:50%;}
+.content .hx_txt li .amount_pane{border-right:none;}
+
+.content .s1_nav .amount_pane { padding: 0; height:18px; }
+.content .s1_txt .bd{margin-left:1px;margin-bottom:1px;height:36px;}
+.content .sb_txt li { float:left;width:100%;margin-bottom:1px;}
+.content .s1_nav li{background:none;}
+.content .sb_txt .ball_m { width: 62px;font-size:12px;}
+.content .sb_txt .odds { width: 55px; }
+.content .sb_txt .amount_pane { width: 80px;}
+.content .sb_txt .ball_box { width: 435px;padding-left:5px}
+.content .sb_txt .ball_box span,.content .tx_txt .ball_box span{ width:27px; font-weight: 500;font-size:14px;}
+.content .sb_txt .s1_nav span{height:19px;}
+
+/*.content .s1_nav .ball_m { background: none; }
+.content .hx_txt .ball_m{width:80px;}
+.content .odds { color: #FF0000; }
+.content .main_nav input { height: 25px; width: 90px; display: block; float: left; margin: 0 5px; }
+.content .main_nav input.active{color:#f00;}
+.content .zm16_txt { width: 918px; }
+.content .zm16_nav li {border: 1px solid #cccccc; height: 23px; line-height: 23px; text-align:center;background:#eeece1;}
+.content .zm16_txt .btn { margin-top: 20px; }
+.content .zm16_txt .btn input { width: 50px; height: 25px; }
+.content .lm_txt .lm_bom{height:25px;line-height:25px;background:#EEECE1;}
+.content .lm_txt .lm_bom div{float:left;text-align:center;color:#000;}
+.content .lm_txt .lm_bom li {height: 25px; line-height: 25px;  font-size: 12px; color: #ffffff; border:none;}
+.content .lm_txt .lm_bom li label{color:#000;}
+.content .lm_txt .lm_bom .last input { width: 50px; }
+.content .bz_txt .bz_nav { float: left; padding-top:10px; }
+.content .bz_txt .btn { padding:1px 12px; }
+.content .bz_txt .bz_nav input { width: 60px; height: 22px; }
+.content .bz_txt .btn .txt_input{margin:0;width:40px;}
+
+.content .hx_txt .amount_pane{width:79px;}
+.content .lm_txt ul .amount,.content .hx_txt .tx_txt1 .amount,.content .bz_txt ul .amount{border:none;}
+.content .sb_txt .ball_box span, .content .tx_txt .ball_box span,
+.content .yx_txt .ball_box span, .content .ws_txt .ball_box span,
+.content .hx_txt .ball_box span, .content .lx_txt .ball_box span,
+.content .lw_txt .ball_box span { width: 36px; font-size: 14px; font-weight: bold; }
+.content .tx_txt .tx_txt1, .content .tx_txt .tx_txt2,
+.content .hx_txt .hx_txt1, .content .hx_txt .hx_txt2,
+.content .yx_txt .yx_txt1, .content .yx_txt .yx_txt2,
+.content .lx_txt .lx_txt1, .content .lx_txt .lx_txt2 { float: left; width:100%; border-left: 1px solid #ffffff; border-right: #cccccc solid 1px; margin-bottom: 10px; }
+.content .tx_txt .ball_box, .content .yx_txt .ball_box,
+.content .ws_txt .ball_box, .content .hx_txt .ball_box,
+.content .lx_txt .ball_box, .content .lw_txt .ball_box { border-left: 1px solid #ffffff; }
+.content .tx_txt .odds, .content .yx_txt .odds,
+.content .ws_txt .odds, .content .hx_txt .odds,
+.content .lx_txt .odds, .content .lw_txt .odds { }
+.content .yx_txt li, .content .ws_txt li,
+.content .hx_txt li, .content .lx_txt li, .content .lw_txt li { border-top: #ffffff 1px solid; border-bottom: #cccccc 1px solid; }
+.content .tx_txt .btn input, .content .yx_txt .btn input, .content .ws_txt .btn input { width: 40px; margin-top: 20px; }
+.content .tx_txt .btn input{margin:0;}
+.content .yx_txt .yx_txt3 li, .content .ws_txt li, .content .lw_txt li { border-left: 1px solid #ffffff; border-right: 1px solid #cccccc; }
+.content .yx_txt h2 { font-size: 14px; text-align: left; margin-top: 10px; }
+.content .ws_txt .ball_m { font-size: 18px; font-weight: bold; }
+.content .ws_txt .s1_nav .ball_m { font-size: 12px; font-weight: normal; }
+.content .hx_txt3 span { width: 125px; border-left: 1px solid #ffffff; border-right: 1px solid #cccccc; }
+.content .hx_nav span { height: 25px; margin:0 2px;}
+.content .hx_nav span input { padding: 2px 0; width: 50px; }
+.content .lx_nav, .content .lw_nav { float: left; padding-top: 10px; }
+.content .lx_nav input { /*width: 70px; padding: 0 2px;_float:left;*padding:0; }
+.content .lx_nav input.active{color:#f00;}
+.content div.btn{margin-top:8px;}
+.content .lx_txt .btn, .content .lw_txt .btn { float: right; padding-top: 10px; }
+.content .lx_txt .btn .txt_input, .content .lw_txt .btn .txt_input { width: 60px; height: 18px; }
+.content .lf_txt1 { width: 750px; }
+.content .lf_txt2 { width: 625px; margin-left: 62px !important; border-left: 1px solid #cccccc; }
+.content .lf_txt3 { width: 500px; margin-left: 124px !important; border-left: 1px solid #cccccc; }
+.content .lf_txt4 { width: 375px; margin-left: 187px !important; border-left: 1px solid #cccccc; }
+.content .lf_txt5 { width: 250px; margin-left: 249px !important; border-left: 1px solid #cccccc; }
+.content .lf_txt6 { width: 125px; margin-left: 312px !important; border-left: 1px solid #cccccc; }
+.content .lf_txt li, .content .lf_txt .s1_nav span { width: 123px; border-right: 1px solid #cccccc; border-left: #ffffff 1px solid; height: 60px; line-height: 30px; }
+.content .lf_txt .s1_nav { width: 100%; float: none; height: 25px; }
+.content .lf_txt div .l input, .content .lf_txt div .f input { width: 50px; height: 21px; display: block; margin: 0 3px; }
+.content .lf_txt div .l, .content .lf_txt div .f { width: 60px; height: 60px; font-weight: bold; font-size: 14px; }
+.content .lf_txt div .l { border-right: #cccccc 1px solid; color: red; }
+.content .lf_txt div .f { border-left: 1px solid #ffffff; color: blue; }
+.content .lf_txt .btn { margin-top: 10px; text-align: right; }
+.content .lf_txt .btn input { padding: 1px 2px; }
+.btn-wrap .btn{margin-top:10px;}*/
+
+.content .main_nav{padding:5px 0;}
+.ExtraDrawn .main_nav{height:25px;overflow:hidden;}
+.content .main_nav input{*display:inline;*zoom:1;width:72px;text-align:center;padding:0 2px 2px 0;margin:0 3px;border:none;height: 27px; font-size:12px;line-height:27px;text-align:center;vertical-align:top;cursor:pointer;border-radius:4px;}
+.content .tx_txt{margin:0;}
+.content .tx_txt .tx_txt1{margin:0;}
+.content .tx_txt .tx_txt1 li{width:50%;}
+
+.tx_txt .ball_m{width:15%}
+.tx_txt .odds{width:15%}
+.tx_txt .amount_pane{width:20%; }
+.tx_txt .ball_box{width:47%;height:31px;}
+.tx_txt .s1_nav .ball_m{width:15%;font-size:12px;}
+
+
+.btn-wrap,.lm_bom {height:42px;padding:7px 0 0px 0;text-align:center;}
+.btn-wrap .btn,.lm_bom .btn{margin-top:8px;}
+.lm_bom{height:37px;padding:14px 0 0 0;}
+.diy-slct-sum .btn,.dss-btn a{width:50px;height:17px;padding:3px 0;display:inline-block;border-width:0 1px 1px 1px;border-style:solid;text-shadow:initial;line-height:1;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;vertical-align:middle;}
+.diy-slct-sum a.btn,.dss-btn a{line-height:17px;}
+.content .lm_bom .btn{margin:0 5px 0 5px;}
+
+.content .lm_bom li{height:25px;line-height:25px;font-size:12px;width:81px;padding-left:20px;}
+.content .lm_bom input{float:left;display:inline;margin-top:7px;*margin-top:2px;}
+.content .lm_bom .bz_nav input,.content .lm_bom .lx_nav input{border:none; border-radius:4px;margin:0 2px;width:82px;height:27px;padding-bottom:2px;border-radius:4px;}
+@-moz-document url-prefix() { .content .lm_bom .bz_nav input,.content .lm_bom .lx_nav input{ padding:0 2px; }}
+.content .lm_bom .bz_nav input{}
+.content .lm_bom label{float:left;font-weight:bold;}
+.content .lm_bom .last{float:right;padding-top:1px;}
+.content .lm_bom span{float:left;margin-right:3px;height:25px;line-height:25px;}
+.content .lm_bom .last .sum{width:60px;margin:0;height:20px;line-height:20px\9;}
+
+.Multi .odds,.Multi .border_002{border-right:none;}
+.Multi .amount_pane{height:32px;font-weight:bold;}
+.Multi .border_003{height:31px;}
+
+
+/*色波*/
+.colorball .s1_nav li{width:100%;border-width:0 0 1px 1px }
+.colorball .s1_nav li .bd{height:19px;line-height:19px;border-width:0;}
+
+/*正码1－6*/
+.content .zm16_txt li{width:190px;}
+.content .zm16_nav li{height:29px;width:189px;margin-left:1px;}
+.content .zm16_nav li span{display:block;float:none;height:29px;line-height:29px;font-weight:bold;font-size:12px;}
+
+.hx_nav{width:100%;height:30px;padding-top:5px;}
+.hx_nav span { height: 25px; margin:0 2px;}
+.hx_nav span input{*display:inline;*zoom:1;width:72px;text-align:center;padding:0 2px 2px 0;margin:0 3px;border:none;height:27px; font-size:12px;line-height:27px;vertical-align:top;cursor:pointer;border-radius:4px;}
+.hx_txt .ball_box{width:48%;height:36px;}
+.hx_txt .ball_box .ball{width:28px;height:36px;line-height:36px;}
+.hx_txt .amount_pane{width:25%;}
+.hx_txt .hx_txt3 li{width:20%;}
+
+.bz_txt .odds,.bz_txt .border_002{border-right:none;}
+.bz_txt .border_003{border-right:1px solid #a4a4a4;}
+.bz_txt .amount_pane{height:32px;font-weight:bold;}
+.bz_nav input,.lx_nav input{float:left;margin:0 2px;}
+.bz_nav .last{width:200px;}
+
+/*正特 right*/
+.Drawn .txt_section1,.ExtraDrawn .txt_section1{width:900px;float:left;}
+.Drawn .txt_section1{height:473px;}
+.ExtraDrawn .txt_section1{height:438px;}
+.quickSlct li{hegiht:19px;line-height:19px;float:left;display:inline;}
+.quickSlct .quickSlct_btn input{border:none;}
+.quickSlct .buttom1 {padding:2px 0;}
+.quickSlct .buttom2,.quickSlct .buttom3,.quickSlct .buttom4{padding:2px 0;}
+.quickSlct .sec2_right{height:145px;padding: 0 6px}
+.quickSlct .sec2_right .text_input{padding:5px 0 3px 0;}
+.quickSlct {text-align:center;height:520px;}
+.quickSlct_btn {padding:6px}
+
+/*1肖*/
+.second-Nav{text-align:center;}
+
+/*自选不中*/
+.bz_txt ul .amount{border:none;}
+
+/* 合肖 */
+.hx_txt .combo_zodiac{overflow:hidden;width:100%;position:relative;}
+.hx_txt .combo_zodiac li{width:189px;height:auto;border-bottom:0!important;margin:0 0 1px  1px ;line-height:30px;}
+.hx_txt .combo_zodiac .cz_title{height:25px;line-height:25px;font-weight:700;text-align:center;position:relative;}
+/*.hx_txt .combo_zodiac .cz_title i{display:block;width:1px;height:19px;position:absolute}
+.hx_txt .combo_zodiac .cz_title i.fl_bd{left:0;top:3px;background:#fff;}
+.hx_txt .combo_zodiac .cz_title i.fr_bd{right:0;top:3px;background:#BCBABC;}*/
+.hx_nav{padding-bottom:2px;}
+.hx_nav .main_nav{padding:0;}
+.hx_txt .combo_zodiac .cz_1,.combo_zodiac .cz_2{overflow:hidden;position:relative;}
+.hx_txt .combo_zodiac .cz_3{padding-left:45px;}
+.hx_txt .combo_zodiac .cz_3 input{margin-top:8px;*margin-top:6px;vertical-align:top;display:inline-block;}
+.hx_txt .combo_zodiac .cz_3 label{margin-left:3px;*margin-left:0;vertical-align:top;display:inline-block;color:#fff;font-size:13px;}
+.hx_txt .combo_zodiac .cz_4{width:60px;position:absolute;right:0;top:0;text-align:center;font-family:Verdana,Arial;font-weight:bold;}
+.hx_txt .combo_zodiac .cz_settle{position:absolute;right:0;bottom:0;border-left:none;width:189px;text-align:center;padding:5px 0;height:75px;margin-bottom:1px;}
+.hx_txt .combo_zodiac .czs_2{margin:0 0 5px 0;}
+.hx_txt .combo_zodiac .czs_2 input{width:60px;padding:0 3px;height:20px;line-height:20px\9;cursor:text;}
+.hx_txt .combo_zodiac .czs_3 .btn{margin-top:0}
+/*.hx_txt .hx_txt3{margin-top:5px;}*/
+
+
+/* 龙虎斗 toradora */
+.toradora{position:relative;/*height:410px;*/z-index:3;}
+.toradora li{width:148px;height:91px;line-height:normal;float:left;display:inline;margin:0 1px 1px 0;}
+.toradora li.offset-0{margin-left:74px;}
+.toradora li.offset-1{margin-left:149px;}
+.toradora li.offset-2{margin-left:223px}
+.toradora li.offset-3{margin-left:297px;}
+.toradora li.offset-4{margin-left:371px;} 
+.toradora .t-head{height:30px;line-height:30px;text-align:center;font-weight:700;padding-bottom:1px;font-size: 13px;}
+.toradora .t-box{overflow:hidden;height:60px;}
+.toradora .t-name span{display:inline;float:none;height:29px;line-height:29px;font-weight: 700;}
+.toradora .t-odds{font-family:Arial;margin-left:3px;}
+.toradora .t-item{float:left;width:74px;text-align:center;padding:0;height:59px;}
+.toradora .t-item .txt-red,.toradora .t-item .txt-blue{font-size:14px;font-weight:700; }
+.toradora .t-input{padding-top:4px;}
+.toradora .t-input input{width:80%;height:17px;line-height:17px\9;cursor:text;border:none;}
+.toradora_btn{text-align:center;padding:10px 20px 10px 0;position:absolute;right:10px;bottom:0;}
+.waybill-tab{width:900px;height:100%;}
+
+
+/*右侧*/
+/*.checkbets_bar{width:100%;padding-top:4px;}
+.checkbets_bar .content{padding:0 6px 0 7px;width:auto;}
+.checkbets_bar table{width:100%;border-spacing:0px;}
+.checkbets_bar .nums a,.checkbets_bar td span,.checkbets_bar .zodiac a,.quickSlct .quickSlct_btn input{margin:1px;height:21px;line-height:21px;float:left;border:none;text-align:center;display:inline;}
+.quickSlct .quickSlct_btn li{margin:1px 1px 2px 2px;}
+.quickSlct .quickSlct_btn input{margin:0;border:1px solid #064065;color:#feec8f;background:none;}
+.rightbar .title{text-align:center;line-height:24px;font-weight:700;height:45px;}
+.rightbar .title a{width:50%;height:35px;float:left;line-height:35px;display:inline;overflow:hidden;margin-top:8px;*margin-right:-3px;background:url(/content/default/images/rightbar.png?54a1b3934d) no-repeat;}
+.rightbar .title .QuickOrder{background-position:right top;}
+.rightbar .title .active{background-position-y:bottom;}
+.checkbets_bar .nums a{width:40px;border:1px solid #064065;color:#feec8f;}
+.checkbets_bar td span,.quickSlct_btn input{width:52px;margin:1px;}
+.checkbets_bar .zodiac a{width:32px;height:19px;margin:1px;border:1px solid #064065;color:#feec8f;}
+.checkbets_bar .nums td{width:42px;border-spacing:0px;text-align:center;}
+.checkbets_bar td span input{display:none;}
+.checkbets_bar td span label{display:block;cursor:pointer;border:1px solid #064065;color:#feec8f;}
+.checkbets_bar .sum,.sec2_right .sum{height:27px;padding-top:5px;}
+.checkbets_bar .sum span,.qs_content .sum span{width:35px;height:23px;line-height:23px;text-align:center;float:left;font-size:14px;margin:1px 4px;border:none;color:#feec8f;}
+.checkbets_bar .nums a:hover, .checkbets_bar td span label:hover,
+.zodiac a:hover, .checkbets_bar td span:hover{background:#569ed0;border-color:#569ed0;color:#fff}
+.nums a.active, .checkbets_bar td span label.active,
+.zodiac a.active, .checkbets_bar td span.active{background:#d24a4a;border-color:#d24a4a;color:#fff;}
+.checkbets_bar .sum .sum-txt,.qs_content .sum .sum-txt{width:110px;height:22px;float:left;margin:1px 2px 0 2px;line-height:22px\9;border:1px solid #064065;background:none;color:#fff;}
+.checkbets_bar .sum .sum-btn,.checkbets_bar .slct-btn input,.sec2_right .slct-btn input,.qs_content .sum .sum-btn{width:79px;height:29px;margin-top:1px;border:none;outline:none;outline:none;-moz-outline:none;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+.checkbets_bar .sum .sum-btn,.qs_content .sum .sum-btn{width:47px;height:23px;padding:3px 0;display:inline-block;line-height:1;background:url(/content/default/images/rightbar-btn.png?4e8731398a) no-repeat; }
+.checkbets_bar .slct-btn input,.sec2_right .slct-btn input{margin:0 3px;}
+.checkbets_bar .bd_bar{width:100%;height:0px;margin:1px 0;_display:none;}
+.checkbets_bar .slct-btn,.checkbets_bar .slct-num{padding-top:5px;}
+.checkbets_bar .slct-num textarea,.sec2_right .text_input textarea{width:169px;height:62px;resize:none;overflow:auto;border:1px solid #064065;background:none;color:#fff;}
+.qs_content{}*/
+.rightbar .title{text-align:center;line-height:24px;font-weight:700;height:45px;width:100%;}
+.rightbar .title a{width:50%;height:35px;float:left;line-height:35px;display:inline;overflow:hidden;margin-top:8px;*margin-right:-3px;font-size:0;line-height:999;}
+.quick-bet{padding-left:1px;/*position:absolute;top:45px;left:0;bottom:0;*/}
+.quick-bet ul{*width:228px}
+.quick-bet li input{margin:0 1px}
+.quick-bet input.btn-1{width:44px;height:23px;}
+.quick-bet input.btn-2,.quick-bet input.btn-4{width:56px;height:23px;margin: 1px 0 0 1px;*float:left;*display:inline;}
+.quick-bet input.btn-3{width:36px;height:23px;}
+.quick-bet span{padding:0 5px;line-height:26px;}
+.quick-bet p{padding:10px 8px;}
+.quick-bet textarea{width:169px;height:62px;margin:0 27px;resize:none;overflow:auto;}
+.quick-bet .quickTextarea{width:209px;margin:0 7px;height:120px;}
+.quick-bet .sum {padding:8px 0 2px 0;}
+.quick-bet .sum-txt{width:120px;height:22px;float:left;margin:1px 2px 0 2px;line-height:22px\9;}
+.quick-bet .sum-btn{width:50px;height:29px;margin:0 3px;margin-top:1px;border:none;outline:none;outline:none;-moz-outline:none;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+.slct-btn{text-align:center;padding:10px 0;}
+.slct-btn .btn{width:79px;height:29px;border:none;outline:none;outline:none;-moz-outline:none;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+
+
+
+.quickorder_bar .txt {  margin: 5px; padding: 3px; }
+.quickorder_bar .txt textarea { width: 100%; border: 0; resize: none; outline:none;height:200px;overflow:auto;}
+.quickorder_bar .btn{text-align:center;margin:10px 0;}
+.quickorder_bar .btn input { margin: 0 5px; width:79px;height:29px;padding: 0 0 3px 0;border:none; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.quickorder_bar p{line-height:1.4;margin:0px 5px 7px 5px;font-size:12px;}
+
+
+/*/* firefox input 
+@-moz-document url-prefix(){.content input.btn{line-height:1.8;}}*/
+
+
+/*@media screen and (max-width: 1200px){
+    .ball_info{width:645px;}
+    .TeA,.TeB,.toradora_bar,.Drawn,.ExtraDrawn{width:645px;}
+    .toradora li{width:105px;background-position:0 -68px;}
+    .toradora li.offset-0{margin-left:52px;}
+    .toradora li.offset-1{margin-left:104px;}
+    .toradora li.offset-2{margin-left:156px}
+    .toradora li.offset-3{margin-left:208px;}
+    .toradora li.offset-4{margin-left:260px;} 
+    .quickSlct{width:180px;margin-left:1px;}
+    .waybill-tab a{margin:0 1px;width:42px;}
+    .toradora .t-item{width:52px;}
+    .ball_info li a {padding:0 6px;}
+    .content .btn_ok input{margin:5px 0 0 6px;}
+    .rbar_in{width:180px;margin-left:1px}
+    .zodiac div{margin:0;}
+    .Drawn .txt_section1,.ExtraDrawn .txt_section1{width:645px;}
+    .hx_txt .combo_zodiac .cz_settle{width:16.6%;}
+    .quickSlct_btn input{width:39px;}
+     .qs_content .sum .sum-txt{width:80px;}
+}
+@media screen and (max-width: 200px){
+     .checkbets_bar .nums a,.checkbets_bar td span,.checkbets_bar .zodiac a{margin:1px;}
+     .checkbets_bar .content{padding:0;}
+     .checkbets_bar .nums a{width:34px;}
+     .checkbets_bar td span{width:42px;}
+     .checkbets_bar .zodiac a{width:29px;}
+     .checkbets_bar td span{margin:1px 1px 1px 2px}
+     .checkbets_bar .zodiac a{margin:1px 0px 1px 1px}
+    .checkbets_bar .sum .sum-txt{width:80px}
+}
+
+.w-1000 .ball_info{width:645px;}
+.w-1000 .content{padding:0;}
+.w-1000 .TeA,.w-1000 .TeB,.w-1000 .toradora_bar,
+.w-1000 .Drawn .txt_section1,.w-1000 .ExtraDrawn .txt_section1{width:645px;}
+.w-1000 .toradora li{width:105px;background-position:0 -68px;}
+.w-1000 .quickSlct .quickSlct_btn input{margin:1px;}
+.w-1000 .quickSlct{width:180px;margin-left:1px;}
+.w-1000 .waybill-tab a{margin:0 1px;}
+.w-1000 .toradora .t-item{width:52px;}
+.w-1000 .ball_info li a {padding:0 6px;}
+.w-1000 .content .btn_ok input{margin:5px 1px 0 0;}
+.w-1000 .rbar_in{width:180px;margin-left:1px}
+.w-1000 .zodiac div{margin:0;}
+.w-1000 .nums a,.w-1000 td span,.w-1000 .zodiac a{margin:1px;}
+.w-1000 .content td span{margin:0 1px 1px 1px;width:42px;}
+.w-1000 .nums a{width:34px;}
+.w-1000 .zodiac a{margin:0 0px 1px 1px;width:29px;}
+.w-1000 .content .zm16_txt li,.w-1000 .hx_txt .combo_zodiac li{*width:137px;}
+.w-1000 .hx_txt .combo_zodiac .cz_settle{*width:140px;}
+.w-1000 .sum .sum-txt{width:80px;}
+.w-1000 .tx_txt .tx_txt1 li{width:413px;}
+.w-1000 .content .tx_txt .tx_txt1 li{*width:413px;}*/
+
+/* 规则说明 begin */
+.dn{
+    display:none;
+}
+.gz_tab li {
+    float: left;
+    list-style: none;
+    height: 28px;
+    line-height: 28px;
+}
+.gz_tab li a {
+    padding: 0 5px;
+    display: block;
+}
+.gz_tab li.curr a {
+    border-width: 0 1px;
+    border-style: solid;
+}
+.rule-box{ width:950px;height:500px;overflow:hidden;}
+.gz_con{
+    height:470px;
+    overflow:auto;
+}
+.b_tit { font-size: 18px; margin: 10px 0; font-family: SimHei,SimSun; }
+span.gz_tit { margin: 5px 0; font-size: 14px; }
+.fnt_bold { font-weight: bold; }
+.gz_tab li a:hover { text-decoration: underline; }
+/* 规则说明 end */
+
+
+
+
+/*倒计时*/
+.flip-clock-wrapper ul { 
+    margin:1px 0 1px 1px;
+}
+.flip-clock-wrapper ul li a div div.inn{
+    text-shadow:none;
+}
+
+.btn-wrap1{text-align:center}
+.btn-wrap1 label{height:17px;line-height:17px\9;padding:2px 0;margin-top:6px;    display: inline-block;vertical-align:middle;}
+.fast-amount{border:none; /*background:url(/content/default/images/amount.png?88125cadac) no-repeat;*/ border-radius:3px;width: 63px; height:17px;line-height:17px\9;padding:2px 0;margin-top:9px !important;    display: inline-block;color:#333 !important;}
+
+.fast-select .border_003,
+.fast-select .amount_pane{display:none;}
+.fast-select .border_001,
+.fast-select .border_002,
+.fast-select  li .ball,
+.fast-select  li .ball_m,
+.fast-select  li .odds{width:49%;}
+.fast-select .tx_txt .ball_m,
+.fast-select .tx_txt .odds{width:20%}
+.fast-select .s1_nav .border_002{border-right:none;}
+.fast-select .t-name span{display:block;}
+
+/**/
+.sumBtn_wrap1{float:right;margin-top: -45px;margin-right:235px;width:auto;}
+.rightM0{margin-right:0 !important;}
+
+/*六合彩开奖结果添加加号*/
+.top_in .result-plus{color:#fff;font-size: 15px;font-weight: bold;}
+
+/*新增中奖信息弹窗.*/
+.wintip-amount{
+    text-align: center;
+    font-size: 18px;
+    color: #f00;
+}
+/*消息窗口*/
+.message-container a{
+    border-radius: 3px;
+    padding: 5px;
+    margin: 0 -2px;
+    color: #7b7b7b !important;
+    text-decoration: underline;
+}

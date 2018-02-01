@@ -1,0 +1,245 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户中心-</title>
+    <link href="/css_new/userCenter/usercenter.css?3eda99ab3b" rel="stylesheet" />
+    <link href="/css_new/usercenter.css?ab5383d759" rel="stylesheet" />
+    <script src="/js_new/common/jquery-1.11.3.min.js?a05f16c4c4"></script>
+<style type="text/css">
+    .rulelist{display:block;}
+    /*x068增加单独头部*/
+        .head{
+            position:relative;
+        }
+
+        .head .logo-wrap {
+            margin: 0;
+        }
+        .top-box .main{width:100% !important;margin:0 auto;}
+        .header-main {width:100% !important;margin:0 auto;}
+        .bar-left{margin-left:20px;}
+        .logo{margin-left:20px;}
+        .bar-right {
+            margin-right: 20px;
+        }
+        .top-online{
+            margin-right: 20px;
+        }
+        /*x068增加单独头部*/
+</style>
+</head>
+<body class="bg">
+    <div class="head">
+        <div class="logo-wrap"></div>
+        <div class="top_menu">
+            <div class="clear">
+                <a href="/OffcialOtherGame/Index/26" id="gameListBtn" class="games" title="游戏大厅"><span>游戏大厅</span></a>
+                <a href="/" class="getout" title="返回首页"><span>返回首页</span></a>
+                <a href="http://tb.53kf.com/webCompany.php?arg=10147846&style=1&fromthirdservice=webapp" target="_blank" class="service"  title="在线客服">
+                    <span class="new-msg" id="NewMsg">在线客服</span>
+                </a>
+                <a href="/Help/Betq?gameId=0" class="rule" id="Rule" title="规则说明"><i></i><span class="rule_description">规则说明</span></a>
+                <a href="/Help/Techq" class="help" title="游戏帮助"><i></i><span class="play_help" >游戏帮助</span></a>
+                <a title="登出账号" class="btn-login-out" href="/Home/UserLogout"><span>登出账号</span></a>
+            </div>
+            <!--下拉游戏选择-->
+            <div class="menu-child" style="display:none;" id="lot_sec_menu">
+                <div class="gamelist clear">
+                    <div class="official_play">
+                        <div class="gamelist_tit clear">
+                            <h1 class="red_style">官方玩法</h1>
+                        </div>
+                        <div class="high_wrap">
+                            <div class="gamelist_l">
+                                <ul data-bind="foreach:official">
+                                    <li>
+                                        <a class="game_26" data-bind="attr:{href:'/OffcialOtherGame/Index/'+FGameID}"><font data-bind="text:FGameName"></font></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cut-line"></div>
+                    <div class="credit_play">
+                        <div class="gamelist_tit clear">
+                            <h1 class="orange_style">信用玩法</h1>
+                        </div>
+                        <div class="high_wrap">
+                            <div class="gamelist_r">
+                                <ul data-bind="foreach:credit">
+                                    <li>
+                                        <a class="game_1" data-bind="attr:{href:FGameID==1?'/six/index':'/OtherGame/Index/'+FGameID}"><font data-bind="text:FGameName"></font></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="triangles_back"></div>
+            </div>
+            <!--下拉游戏选择 end-->
+        </div>
+    </div>
+    <div class="container clear">
+        <style>
+            .open{
+                display: none;
+            }
+            .w-op{
+                display: none;
+            }
+        </style>
+        <div class="side-left helpMenu" id="helpMenu">
+            <ul class="side_menu">
+                <li >
+                    <a href="/Help/Generalq" class="sidem_b">常见问题</a>
+                </li>
+                <li >
+                    <a href="/Help/Deposit" class="sidem_b">存款帮助</a>
+                </li>
+                <li >
+                    <a href="/Help/Teller" class="sidem_b">取款帮助</a>
+                </li>
+                <li >
+                    <a href="/Help/Techq" class="sidem_b">新手引导</a>
+                </li>
+                <li>
+                    <a class="sidem_b" onclick="showdiv()"><span>玩法介绍</span></a>
+                    <ul class="rulelist" id="show" >
+                        <li data-id="1"><a href="/Help/Betq?gameId=1"><i class="play-ico"></i><span>香港六合彩</span></a></li>
+                        <li data-id="7"><a href="/Help/Betq?gameId=7"><i class="play-ico"></i><span>重庆时时彩</span></a></li>
+                        <li data-id="9"><a href="/Help/Betq?gameId=9"><i class="play-ico"></i><span>天津时时彩</span></a></li>
+                        <li data-id="10"><a href="/Help/Betq?gameId=10"><i class="play-ico"></i><span>新疆时时彩</span></a></li>
+                        <li data-id="13"><a href="/Help/Betq?gameId=13"><i class="play-ico"></i><span>幸运农场</span></a></li>
+                        <li data-id="15"><a href="/Help/Betq?gameId=15"><i class="play-ico"></i><span>北京PK拾</span></a></li>
+                        <li data-id="26"><a href="/Help/Betq?gameId=26"><i class="play-ico official-ico"></i><span>重庆时时彩</span></a></li>
+                        <li data-id="29"><a href="/Help/Betq?gameId=29"><i class="play-ico official-ico"></i><span>北京PK拾</span></a></li>
+                        <li data-id="30"><a href="/Help/Betq?gameId=30"><i class="play-ico official-ico"></i><span>福彩3D</span></a></li>
+                        <li data-id="39"><a href="/Help/Betq?gameId=39"><i class="play-ico official-ico"></i><span>江苏快三</span></a></li>
+                        <li data-id="40"><a href="/Help/Betq?gameId=40"><i class="play-ico official-ico"></i><span>新疆时时彩</span></a></li>
+                        <li data-id="42"><a href="/Help/Betq?gameId=42"><i class="play-ico official-ico"></i><span>天津时时彩</span></a></li>
+                        <li data-id="44"><a href="/Help/Betq?gameId=44"><i class="play-ico official-ico"></i><span>排列三、五</span></a></li>
+                        <li data-id="61"><a href="/Help/Betq?gameId=61"><i class="play-ico official-ico"></i><span>加拿大3.5分</span></a></li>
+                        <li data-id="68"><a href="/Help/Betq?gameId=68"><i class="play-ico official-ico"></i><span>澳洲3分彩</span></a></li>
+                    </ul>
+                </li>
+                <li  style="display:none">
+                    <a href="/Help/about" class="sidem_b">公司简介</a>      
+                </li>
+            </ul>
+
+            <script src="https://zy11sbsbqt.lfjieweisi.com//Scripts/dist/$.ko.js?a876144a3a"></script>
+            <script>
+                $(function () {
+                    var games = {
+                        'ssc': [26, 40, 41, 42, 43],
+                        '11x5': [32, 45, 46],
+                        'kl8': [28],
+                        'k3': [39],
+                        'fc3d': [30],
+                        'pl35': [44],
+                        'pk10': [29],
+                        'six': [1],
+                        'jxssc': [11],
+                        'bjpks': [15],
+                        'xjssc': [10],
+                        'cqks': [13],
+                        'jstb': [22],
+                        'gd11x5': [4],
+                        'gdkc': [5],
+                        'gxks': [6],
+                        'cqssc': [7],
+                        'tjssc': [9]
+                    };
+                    var links = {};
+                    $.each(games, function (key) {
+                        $.each(this, function (index, item) {
+                            links[item] = key;
+                        });
+                    });
+                    var id = location.search.replace("?gameId=", "");
+                    var gameid = isNaN(id) ? 26 : id || 26;
+                    var $rulelist = $('ul.rulelist');
+                    var mapping = {};
+                    $rulelist.children().each(function () {
+                        mapping[$(this).data("id")] = $(this);
+                    });
+
+                    mapping[gameid] && mapping[gameid].addClass('active');
+                    $('#game-' + gameid).show();
+
+                    $rulelist.delegate('>', 'click', function () {
+                        var $this = $(this);
+                        $this.addClass('active').siblings('.active').removeClass('active');
+                        $('#game-' + $this.data('id')).show().siblings().hide();
+                        location.hash = games[$this.data('id')][0];
+                    });
+                });
+                var menuVM = function () {
+                    this.init = function (id) {
+                        this.getData();
+                        ko.applyBindings(this, $("#" + id)[0]);
+                        return this;
+                    },
+                    this.credit = ko.observableArray(),
+                    this.official = ko.observableArray(),
+                    this.isInitMenu = false,
+                    this.getData = function () {
+                        var that = this;
+                        $.ajax({
+                            url: '/home/gameinfolist',
+                            type: 'GET',
+                            dataType: 'JSON',
+                            success: function (data) {
+                                if (data.length) {
+                                    that.isInitMenu = true;
+                                    that.formatData(data);
+                                }
+                            }
+                        });
+                    },
+                    this.formatData = function (data) {
+                        var credit = [], official = [];
+                        $.each(data, function (index, value) {
+                            var len = value.GameInfoList.length;
+                            $.each(value.GameInfoList, function (i, v) {
+                                v.FGroupId == 3 ? official.push(v) : credit.push(v);
+                            });
+                        });
+                        this.credit(credit);
+                        this.official(official);
+                    }
+                };
+                var vm = new menuVM().init("lot_sec_menu");
+                var time = 0, menuBox = $('#lot_sec_menu');
+                $("#gameListBtn,#lot_sec_menu").hover(function () {
+                    menuBox.stop(true, true).slideDown(300);
+                    clearTimeout(time);
+                }, function () {
+                    time = setTimeout(function () {
+                        menuBox.stop().slideUp(100);
+                    }, 300);
+                })
+
+
+                function showdiv() {
+                    if (showdiv_display = document.getElementById('show').style.display == 'none') {
+                        document.getElementById('show').style.display = 'block';
+                    } else {
+                        document.getElementById('show').style.display = 'none';
+                    }
+                }
+            </script>
+        </div>
+        <div class="ui-main clear">
+            <div class="con_box rule-con">
+                 <div class="help-con" data-id="game-"  >
+<div class="main-tit">重庆时时彩玩法介绍</div><div class="table-list"><table><thead><tr><th width="15%">玩法组</th><th width="15%">玩法</th><th width="40%">玩法说明</th><th width="30%">中奖举例</th></tr></thead><tbody><tr><td rowspan="3">五星直选</td><td>直选（复式）</td><td>从万位、千位、百位、十位、个位中选择一个5位数号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</td><td>如：投注方案：23456；开奖号码：23456，即中五星直选。</td></tr><tr><td>直选（单式）</td><td>手动输入一个5位数号码组成一注，所选号码的万位、千位、百位、十位、个位与开奖号码相同，且顺序一致，即为中奖。</td><td>如：投注方案：23456；开奖号码：23456，即中五星直选。</td></tr><tr><td>组合</td><td>从万位、千位、百位、十位、个位中至少各选一个号码组成1-5星的组合，共五注，所选号码的个位与开奖号码全部相同，则中1个5等奖；所选号码的个位、十位与开奖号码相同，则中1个5等奖以及1个4等奖，依此类推，最高可中5个奖。</td><td>如：五星组合示例，如购买：4 5 6 7 8，该票共10元，由以下5注：45678(五星)、5678(四星)、678(三星)、78(二星)、8(一星)构成。开奖号码：45678，即可中五星、四星、三星、二星、一星各1注。</td></tr><tr><td rowspan="6">五星组选</td><td>五星组选120</td><td>从0-9中任意选择5个号码组成一注，所选号码与开奖号码的万位、千位、百位、十位、个位相同，顺序不限，即为中奖。</td><td>如：投注方案：02568，开奖号码的5个数字必须包含02568（例如：08526），顺序不限，即可中五星组选120。</td></tr><tr><td>五星组选60</td><td>选择1个二重号码和3个单号号码组成一注，所选的单号号码与开奖号码相同，且所选二重号码在开奖号码中出现了2次，即为中奖。</td><td>如：投注方案：二重号：8；单号：025，开奖号码的5个数字必须包含单号025，以及对子号8（例如02858），顺序不限，即可中五星组选60。</td></tr><tr><td>五星组选30</td><td>选择2个二重号和1个单号号码组成一注，所选的单号号码与开奖号码相同，且所选的2个二重号码分别在开奖号码中出现了2次，即为中奖。</td><td>如：投注方案：二重号：2、8；单号：0，开奖号码的5个数字必须包含单号0，以及对子号2和8（例如28082），顺序不限，即可中五星组选30。</td></tr><tr><td>五星组选20</td><td>选择1个三重号码和2个单号号码组成一注，所选的单号号码与开奖号码相同，且所选三重号码在开奖号码中出现了3次，即为中奖。</td><td>如：投注方案：三重号：8；单号：0、2，开奖号码的5个数字必须包含单号0和2，以及三重号8（例如80828），顺序不限，即可中五星组选20。</td></tr><tr><td>五星组选10</td><td>选择1个三重号码和1个二重号码，所选三重号码在开奖号码中出现3次，并且所选二重号码在开奖号码中出现了2次，即为中奖。</td><td>如：投注方案：三重号：8；二重号：2，开奖号码的5个数字必须包含三重号8，以及对子号2（例如28828），顺序不限，即可中五星组选10。</td></tr><tr><td>五星组选5</td><td>选择1个四重号码和1个单号号码组成一注，所选的单号号码与开奖号码相同，且所选四重号码在开奖号码中出现了4次，即为中奖。</td><td>如：投注方案：四重号：8；单号：2，开奖号码的5个数字必须包含四重号8，以及单号2（例如88828），顺序不限，即可中五星组选5。</td></tr><tr><td rowspan="2">四星直选</td><td>直选 （复式）</td><td>从千位、百位、十位、个位中选择一个4位数号码组成一注，所选号码与开奖号码相同，且顺序一致，即为中奖。</td><td>如：投注方案：3456；开奖号码：*3456，即中四星直选。</td></tr><tr><td>直选 （单式）</td><td>手动输入一个4位数号码组成一注，所选号码的千位、百位、十位、个位与开奖号码相同，且顺序一致，即为中奖。</td><td>如：投注方案：3456；开奖号码：*3456，即中四星直选。</td></tr><tr><td>四星组合</td><td>组合</td><td>从千位、百位、十位、个位中至少各选一个号码组成1-4星的组合，共四注，所选号码的个位与开奖号码相同，则中1个4等奖；所选号码的个位、十位与开奖号码相同，则中1个4等奖以及1个3等奖，依此类推，最高可中4个奖。</td><td>如：四星组合示例，如购买：5 6 7 8，该票共8元，由以下4注：5678(四星)、678(三星)、78(二星)、8(一星)构成。开奖号码：*5678，即可中四星、三星、二星、一星各1注。</td></tr><tr><td rowspan="4">四星组选</td><td>四星组选24</td><td>从0-9中任意选择4个号码组成一注，所选号码与开奖号码的千位、百位、十位、个位相同，且顺序不限，即为中奖。</td><td>如：投注方案：0568，开奖号码的后4个数字必须包含0568（例如0856），顺序不限，即可中四星组选24。</td></tr><tr><td>四星组选12</td><td>从千位、百位、十位、个位中，选择1个二重号码和2个单号号码组成一注，所选单号号码与开奖号码相同，且所选二重号码在开奖号码中出现了2次，即为中奖。</td><td>如：投注方案：二重号：8；单号：0、6，开奖号码的后4个数字必须包含单号0、6和对子号8（例如0868），顺序不限，即可中四星组选12。</td></tr><tr><td>四星组选6</td><td>从千位、百位、十位、个位中，选择2个二重号码组成一注，所选的2个二重号码在开奖号码中分别出现了2次，即为中奖。</td><td>如：投注方案：二重号：2、8，开奖号码的后4个数字必须包含两个对子号2和8（例如2882），顺序不限，即可中四星组选6。</td></tr><tr><td>四星组选4</td><td>从千位、百位、十位、个位中，选择1个三重号码和1个单号号码组成一注，所选单号号码与开奖号码相同，且所选三重号码在开奖号码中出现了3次，即为中奖。</td><td>如：投注方案：三重号：8；单号：2，开奖号码的后4个数字必须包含三重号8，以及单号2（比如8828）顺序不限，即可中四星组选4。</td></tr><tr><td rowspan="3">前三直选</td><td>直选复式</td><td>从万位、千位、百位中选择一个3位数号码组成一注，所选号码与开奖号码前3位相同，且顺序一致，即为中奖。</td><td>如：万位选择1，千位选择2，百位选择3，开奖号码为是123**，即为中奖。</td></tr><tr><td>直选单式</td><td>手动输入一个3位数号码组成一注，所选号码与开奖号码的万位、千位、百位相同，且顺序一致，即为中奖。</td><td>如：手动输入123，开奖号码为是123**，即为中奖。</td></tr><tr><td>直选和值</td><td>所选数值等于开奖号码万位、千位、百位三个数字相加之和，即为中奖。</td><td>如：选择6，开奖号码为123**、141**、114**、006**、060**等任意一个和值为6的结果，即为中奖。</td></tr><tr><td rowspan="3">中三直选</td><td>直选复式</td><td>从千位、百位、十位中选择一个3位数号码组成一注，所选号码与开奖号码中3位相同，且顺序一致，即为中奖。</td><td>如：千位选择1，百位选择2，十位选择3，开奖号码为是*123*，即为中奖。</td></tr><tr><td>直选单式</td><td>手动输入一个3位数号码组成一注，所选号码与开奖号码的千位、百位、十位相同，且顺序一致，即为中奖。</td><td>如：手动输入123，开奖号码为是*123*，即为中奖。</td></tr><tr><td>直选和值</td><td>所选数值等于开奖号码千位、百位、十位三个数字相加之和，即为中奖。</td><td>如：选择6，开奖号码为*123*、*141*、*114*、*006*、*060*等任意一个和值为6的结果，即为中奖。</td></tr><tr><td rowspan="3">后三直选</td><td>直选复式</td><td>从百位、十位、个位中选择一个3位数号码组成一注，所选号码与开奖号码后3位相同，且顺序一致，即为中奖。</td><td>如：百位选择1，十位选择2，个位选择3，开奖号码为是**123，即为中奖。</td></tr><tr><td>直选单式</td><td>手动输入一个3位数号码组成一注，所选号码与开奖号码的百位、十位、个位相同，且顺序一致，即为中奖。</td><td>如：手动输入123，开奖号码为是**123，即为中奖。</td></tr><tr><td>直选和值</td><td>所选数值等于开奖号码的百位、十位、个位三个数字相加之和，即为中奖。</td><td>如：选择6，开奖号码为**123、**141、**114、**006、**060等任意一个和值为6的结果，即为中奖。</td></tr><tr><td rowspan="4">前三组选</td><td>组三</td><td>从0-9中任意选择2个号码组成两注，所选号码与开奖号码的万位、千位、百位相同，且顺序不限，即为中奖。</td><td>如：选择12（展开为122**，212**，221** 和 112**、121**、211**），开奖号码为212** 或 121**，即为中奖。</td></tr><tr><td>组六</td><td>从0-9中任意选择3个号码组成一注，所选号码与开奖号码的万位、千位、百位相同，顺序不限，即为中奖。</td><td>如：选择123（展开为123**，132**，231**，213**，312**，321**），开奖号码为321**，即为中奖。</td></tr><tr><td>组选和值</td><td>所选数值等于开奖号码万位、千位、百位三个数字相加之和，即为中奖。（不包含豹子）</td><td>如：选择6，开奖号码为114**中组三奖，开奖号码为015**中组六奖。</td></tr><tr><td>混合组选</td><td>键盘手动输入购买号码，3个数字为一注，开奖号码的万位、千位、百位符合前三的组三或组六均为中奖。</td><td>如：手动输入123、455，开奖号码为321**即中组六奖，开奖号码为545**即中组三奖。</td></tr><tr><td rowspan="4">中三组选</td><td>组三</td><td>从0-9中任意选择2个号码组成两注，所选号码与开奖号码的千位、百位、十位相同，且顺序不限，即为中奖。</td><td>如：选择12（展开为*122*，*212*，*221* 和*112*、*121*、*211*），开奖号码为*212* 或 *121*，即为中奖。</td></tr><tr><td>组六</td><td>从0-9中任意选择3个号码组成一注，所选号码与开奖号码的千位、百位、十位相同，顺序不限，即为中奖。</td><td>如：选择123（展开为*123*，*132*，*231*，*213*，*312*，*321*），开奖号码为*321*，即为中奖。</td></tr><tr><td>组选和值</td><td>所选数值等于开奖号码千位、百位、十位三个数字相加之和，即为中奖。（不包含豹子）</td><td>如：选择6，开奖号码为*114*中组三奖，开奖号码为*015*中组六奖。</td></tr><tr><td>混合组选</td><td>键盘手动输入购买号码，3个数字为一注，开奖号码的千位、百位、十位符合中三的组三或组六均为中奖。</td><td>如：手动输入123、455，开奖号码为*321*即中组六奖，开奖号码为*545*即中组三奖。</td></tr><tr><td rowspan="4">后三组选</td><td>组三</td><td>从0-9中任意选择2个号码组成两注，所选号码与开奖号码的百位、十位、个位相同，且顺序不限，即为中奖。</td><td>如：选择12（展开为**122，**212，**221 和 **112、**121、**211），开奖号码为**212 或 **121，即为中奖。</td></tr><tr><td>组六</td><td>从0-9中任意选择3个号码组成一注，所选号码与开奖号码的百位、十位、个位相同，顺序不限，即为中奖。</td><td>如：选择123（展开为**123，**132，**231，**213，**312，**321），开奖号码为**321，即为中奖。</td></tr><tr><td>组选和值</td><td>所选数值等于开奖号码百位、十位、个位三个数字相加之和，即为中奖。（不包含豹子）</td><td>如：选择6，开奖号码为**114中组三奖，开奖号码为**015中组六奖。</td></tr><tr><td>混合组选</td><td>键盘手动输入购买号码，3个数字为一注，开奖号码的百位、十位、个位符合前三的组三或组六均为中奖。</td><td>如：手动输入123、455，开奖号码为**321即中组六奖，开奖号码为**545即中组三奖。</td></tr><tr><td rowspan="2">后三不定位</td><td>一码不定位</td><td>从0-9中选择1个号码，每注由1个号码组成，只要开奖号码的百位、十位、个位中包含所选号码，即为中奖。</td><td>如：选择一码不定位4，开出**4**、***4*、****4即为中奖。</td></tr><tr><td>二码不定位</td><td>从0-9中选择2个号码，每注由2个不同的号码组成，开奖号码的百位、十位、个位中同时包含所选的2个号码，即为中奖。</td><td>如：选择二码不定位4、5，开奖号码为***45、**5*4、***54即为中奖。</td></tr><tr><td rowspan="10">二星</td><td>前二直选复式</td><td>从万位和千位上至少各选1个号码，所选号码与开奖号码的万位、千位相同，且顺序一致，即为中奖。</td><td>如：万位选择3，千位选择4，开出34***即为中奖。</td></tr><tr><td>前二直选单式</td><td>手动输入一个2位数号码组成一注，所选号码与开奖号码的万位、千位相同，且顺序一致，即为中奖。</td><td>如：手动输入12，开奖号码为是12***，即为中奖。</td></tr><tr><td>前二组选复式</td><td>从0-9中选2个号码组成一注，所择号码与开奖号码的万位、千位相同，顺序不限，即为中奖。（不含对子号）</td><td>如：选择7、8，开奖号码78***或87***，即为中奖。</td></tr><tr><td>前二组选单式</td><td>手动输入购买号码，2个数字为一注，所选号码与开奖号码的万位、千位相同，顺序不限，即为中奖。（不含对子号）</td><td>如：手动输入12，开奖号码为是21***或12***，即为中奖。</td></tr><tr><td>前二组选和值</td><td>所选数值等于开奖号码的万位、千位两个数字相加之和（不含对子号）即为中奖。</td><td>如：和值8；，开奖号码前二位08或者80（顺序不限，不含对子号），即为中奖。</td></tr><tr><td>后二直选复式</td><td>从十位和个位上至少各选1个号码，所选号码与开奖号码的十位、个位相同，且顺序一致，即为中奖。</td><td>如：十位选择3，个位选择4，开奖号码为***34，即为中奖。</td></tr><tr><td>后二直选单式</td><td>手动输入一个2位数号码组成一注，所选号码与开奖号码的十位、个位相同，且顺序一致，即为中奖。</td><td>如：手动输入12，开奖号码为是***12，即为中奖。</td></tr><tr><td>后二组选复式</td><td>从0-9中选2个号码组成一注，所选号码与开奖号码的十位、个位相同，顺序不限，即为中奖。（不含对子号）</td><td>如：选择7、8，开奖号码***78或***87即为中奖。</td></tr><tr><td>后二组选单式</td><td>手动输入购买号码，2个数字为一注，所选号码与开奖号码的十位、个位相同，顺序不限，即为中奖。（不含对子号）</td><td>如：手动输入12，开奖号码为是***21或者***12，即为中奖。</td></tr><tr><td>后二组选和值</td><td>所选数值等于开奖号码的十位、个位两个数字相加之和（不含对子号）即为中奖。</td><td>如：和值8，开奖号码后二位08或者80（顺序不限，不含对子号），即为中奖。</td></tr><tr><td rowspan="5">定位胆</td><td>万位</td><td rowspan="5">从万位、千位、百位、十位、个位任意1个位置或多个位置上选择1个号码，所选号码与相同位置上的开奖号码一致，即为中奖。</td><td>如：定万位为1，开奖号码为1****即为中奖。</td></tr><tr><td>千位</td><td>如：定千位为2，开奖号码为*2***即为中奖。</td></tr><tr><td>百位</td><td>如：定百位为3，开奖号码为**3**即为中奖。</td></tr><tr><td>十位</td><td>如：定十位为4，开奖号码为***4*即为中奖。</td></tr><tr><td>个位</td><td>如：定个位为5，开奖号码为****5即为中奖。</td></tr><tr><td rowspan="2">大小单双</td><td>前二</td><td>对万位和千位的“大（56789）小（01234）、单（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的位置、形态相同，即为中奖。</td><td>如：万位选择大，千位选择单，开出63***即为中奖。</td></tr><tr><td>后二</td><td>对十位和个位的“大（56789）小（01234）、单（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的位置、形态相同，即为中奖。</td><td>如：十位选择小，个位选择双，开出***12即为中奖。</td></tr><tr><td rowspan="4">趣味</td><td>一帆风顺</td><td>从0-9中任意选择1个号码组成一注，只要开奖号码的万位, 千位,百位, 十位, 个位中包含所选号码, 即为中奖。</td><td>如：投注方案：8，至少出现1个8，即中一帆风顺。</td></tr><tr><td>好事成双</td><td>从0-9中任意选择1个号码组成一注，只要所选号码在开奖号码的万位, 千位, 百位, 十位, 个位中出现2次相同，即为中奖。</td><td>如：投注方案：8；至少出现2个8，即中好事成双。</td></tr><tr><td>三星报喜</td><td>从0-9中任意选择1个号码组成一注，只要所选号码在开奖号码的万位, 千位, 百位, 十位, 个位中出现3次, 即为中奖。</td><td>如：投注方案：8：开奖号码，三重号，即中三星报喜。</td></tr><tr><td>四季发财</td><td>从0-9中任意选择1个号码组成一注，只要所选号码在开奖号码的万位, 千位, 百位, 十位, 个位中出现4次, 即为中奖。</td><td>如：投注方案：8；至少出现4个8， 即为四季发财。</td></tr></tbody></table></div>                </div>
+            </div>
+       </div>
+    </div>
+</body>
+</html>

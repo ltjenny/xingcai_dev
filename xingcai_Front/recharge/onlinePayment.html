@@ -1,0 +1,634 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>用户中心-账户充值</title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <link rel="Shortcut Icon" href="/Images/ICO/yuducaipiao/favicon.ico" />
+    <link rel="Bookmark" href="/Images/ICO/yuducaipiao/favicon.ico" />
+    <link href="/css_new/userCenter/usercenter.css?3eda99ab3b" rel="stylesheet" tii="usercenter" />
+    <link href="/css_new/usercenter.css?ab5383d759" rel="stylesheet" />
+    <script src="/js_new/dist/$.ko.js?a876144a3a"></script>
+    <script src="/js_new/common/jquery.knob.js?be4c010975"></script>
+    <script src="/js_new/common/modernizr.custom.js?44a0670bed"></script>
+    <script src="/js_new/common/artDialog6/dialog-plus-min.js?4786a25c83"></script>
+    <link href="/js_new/common/artDialog6/ui-dialog.css?ae7e700648" rel="stylesheet" />
+    <script src="/js_new/dist/official/utils.min.js?94126d98c6"></script>
+    <script src="/js_new/common/banner.js?3bc5e3023e"></script>
+    <script src="/js_new/common/ko.page.js?23b592fe9a"></script>
+    <style>
+        /*x068增加单独头部*/
+        .head {
+            position: relative;
+        }
+
+            .head .logo-wrap {
+                margin: 0;
+            }
+
+        .top-box .main {
+            width: 100% !important;
+            margin: 0 auto;
+        }
+
+        .header-main {
+            width: 100% !important;
+            margin: 0 auto;
+        }
+
+        .bar-left {
+            margin-left: 20px;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .bar-right {
+            margin-right: 20px;
+        }
+
+        .top-online {
+            margin-right: 20px;
+        }
+        /*x068增加单独头部*/
+    </style>
+</head>
+<body class="bg body UC-con">
+    
+
+    
+    <input type="hidden" id="accountId" value="632874" />
+    <div class="head">
+        <div class="logo-wrap"></div>
+        <div class="top_menu">
+            <div class="clear">
+                <a href="/OffcialOtherGame/Index/26" id="gameListBtn" class="games" title="游戏大厅"><span>游戏大厅</span></a>
+                <a href="/" class="getout" title="返回首页"><span>返回首页</span></a>
+                <a href="http://tb.53kf.com/webCompany.php?arg=10147846&style=1&fromthirdservice=webapp" target="_blank" class="service" title="在线客服">
+                    <span class="new-msg" id="NewMsg">在线客服</span>
+                </a>
+                <a href="/Help/Betq?gameId=0" class="rule" id="Rule" title="规则说明"><i></i><span class="rule_description">规则说明</span></a>
+                <a href="/Help/Techq" class="help" title="游戏帮助"><i></i><span class="play_help">游戏帮助</span></a>
+                <a title="登出账号" class="btn-login-out" href="/Home/UserLogout"><span>登出账号</span></a>
+            </div>
+
+            <!--下拉游戏选择-->
+            <div class="menu-child" style="display:none;" id="lot_sec_menu">
+                <div class="gamelist clear">
+                    <div class="official_play">
+                        <div class="gamelist_tit clear">
+                            <h1 class="red_style">官方玩法</h1>
+                        </div>
+                        <div class="high_wrap">
+                            <div class="gamelist_l">
+                                <ul data-bind="foreach:official">
+                                    <li>
+                                        <a class="game_26" data-bind="attr:{href:'/OffcialOtherGame/Index/'+FGameID}"><font data-bind="text:FGameName"></font></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cut-line"></div>
+                    <div class="credit_play">
+                        <div class="gamelist_tit clear">
+                            <h1 class="orange_style">信用玩法</h1>
+                        </div>
+                        <div class="high_wrap">
+                            <div class="gamelist_r">
+                                <ul data-bind="foreach:credit">
+                                    <li>
+                                        <a class="game_1" data-bind="attr:{href:FGameID==1?'/six/index':'/OtherGame/Index/'+FGameID}"><font data-bind="text:FGameName"></font></a>
+                                    </li>
+                                    
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="triangles_back"></div>
+            </div>
+            <!--下拉游戏选择 end-->
+        </div>
+    </div>
+    <div class="container clear">
+        <div class="side-left">
+            <div class="user-info">
+                <div class="userbox">
+                    <ul class="stc_1 clear">
+                        <li class="mane">
+                            <span class="stc_t">账号：</span>
+                            <span class="stc_c">321</span>
+                        </li>
+                        <li class="balance">
+                            <span class="stc_t">余额：</span>
+                            <span class="stc_c" id="AvailableBalance">0</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="acc-links clear" id="OpenNewWindow">
+                    <a title="在线存款" class="btn-navacc btn-navacc-deposit" href="/Recharge/Index"><span title="在线存款">充值</span></a>
+                    <a title="在线取款" class="jGetMoney btn-navacc btn-navacc-withdraw" href="javascript:;"><span title="在线取款">提现</span></a>
+                </div>
+            </div>
+            <div class="side_menu" id="sideMenu">
+                <div class="sidem_item">
+                    <a href="javascript:void(0)" class="sidem_b"><span>投注记录</span></a>
+                    <ul style="display:none;">
+                        <li><a href="/Report/Bet"><span>购彩查询</span></a></li>
+                        <li><a href="/Report/Track"><span>追号查询</span></a></li>
+                    </ul>
+                </div>
+                    <div class="sidem_item">
+                        <a href="javascript:void(0)" class="sidem_b"><span>报表管理</span></a>
+                        <ul style="display:none;">
+                            <li><a href="/Report/AccountChange"><span>帐变报表</span></a></li>
+                            <li><a href="/Report/IndividualReport"><span>个人报表</span></a></li>
+                            <li><a href="/UserCenter/UserJoinActivity"><span>优惠活动详情</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="sidem_item">
+                        <a href="javascript:void(0)" class="sidem_b"><span>账户管理</span></a>
+                        <ul style="display:none;">
+                            <li><a href="/UserCenter/UserInfo"><span>个人总览</span></a></li>
+                            <li>
+                                <span class="sidem_sub"><i></i>密码管理</span>
+                                <ul style="display:none;">
+                                    <li><a href="/UserCenter/EditPwd">密码修改</a></li>
+                                    <li><a href="/UserCenter/SecretQuestion">密保设定</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/UserCenter/CardsList"><span>银行卡管理</span></a></li>
+                                <li class="c9-hide"><a href="/UserCenter/Emails"><span>用户资料</span></a></li>
+                            <!--
+                                <li>
+                                    <span class="sidem_sub"><i></i>资料修改</span>
+                                    <ul style="display:none;">
+                                        <li><a href="/UserCenter/Emails">绑定邮箱</a></li>
+                                        <li><a href="/UserCenter/Contact">联系方式</a></li>
+                                    </ul>
+                                </li>
+                            -->
+                            <li><a href="/UserCenter/GameInformation"><span>彩种信息</span></a></li>
+                                <li><a href="/UserCenter/GameLimits"><span>彩种限额</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="sidem_item">
+                        <a href="javascript:void(0)" class="sidem_b"><span>短信公告</span></a>
+                        <ul style="display:none;">
+                            <li><a href="/UserCenter/Messge">站内短信</a></li>
+                            <li><a href="/UserCenter/Notice">网站公告</a></li>
+                        </ul>
+                    </div>
+            </div>
+            <script type="text/javascript">
+                (function () {
+                    var active = '';
+                    var url = document.location.href.toLowerCase();
+                    //var patt = new RegExp(url);
+                    $(".side_menu").find("a").each(function (a, b) {
+                        var thisEle = $(this);
+                        var thisUrl = thisEle.attr("href").toLowerCase();
+                        if (/editpwd|secretquestion|emails|contact/g.test(url)) {
+                            thisEle.parent().parent().parent().parent().show();
+                        }
+                        //if (active != '') {
+                        //    if (new RegExp(active.toLowerCase()).test(thisUrl)) {
+                        //        thisEle.parent().parent().show();
+                        //        thisEle.parent().addClass("active");
+                        //    }
+                        //} else {
+                            if (url.match(thisUrl)) {
+                                thisEle.parent().parent().show();
+                                thisEle.parent().addClass("active");
+                            }
+                        //}
+                    });
+
+                    /// 左边菜单折叠效果
+                    $(function () {
+                        var sidemenu = $("#sideMenu");
+                        var btnbars = sidemenu.children().children("a");
+                        btnbars.on("click", function () {
+                            var $this = $(this);
+                            $this.next("ul").slideToggle("fast");
+                            $this.parent().siblings().children("ul").slideUp("fast");
+                        });
+                        sidemenu.find(".sidem_sub").on("click", function () {
+                            $(this).next().slideToggle("fast");
+                        });
+                    });
+                })();
+            </script>
+        </div>
+        <div class="ui-main clear" id="ulMain">
+            <style>
+                .Recharge-table table { border-right: none; border-left: 1px solid #d8d8d8; border-top: 1px solid #d8d8d8; }
+                .Recharge-table td { border-right: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; padding: 5px 10px; }
+            </style>
+            <div class="pages-con p-c1" id="receiptsIndexContainer">
+                <div class="main">
+                    <div class="main-head">
+                        <span>
+                            用户中心&gt;账户充值
+                        </span>
+                    </div>
+                    <div class="memcenter clear">
+                        <div class="memRight">
+                            <div class="con_box">
+                                <!--支付2.0-->
+                                <div class="Recharge-table">
+                                    <div class="r-tab">
+                                        <ul>
+                                            <li class="js_pay_type icon_1"><a href="/Recharge/OnlinePayment/1" class=on>在线支付</a></li>
+                                            <li class="js_pay_type icon_2"><a href="/Recharge/OnlinePayment/2" >微信</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="r-wrap">
+                                        <div class="rbank-item">
+                                            <!--微信支付开始-->
+                                            <div class="pay-list" style="display:none;" data-bind="visible: !isLoading()">
+                                                <div data-bind="visible: payList().length > 0">
+                                                    <h3>
+                                                        <i>1</i>请选择线上支付通道：
+                                                    </h3>
+                                                    <div class="rbank-info other-info" data-bind="css: 'pay_'+currentPayType()">
+                                                        <div class="top clear" data-bind="foreach: payList">
+                                                            <a class="clo-item on" href="javascript:;" data-bind="click:$parent.tabCurrentThreePayType.bind($parent, $data), css: {on: $parent.currentThreePay()==$data}">
+                                                                <i class="rbank-icon"></i><label data-bind="text:MerchantName"></label>
+                                                                <i class="rbank-icon mark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-bind="visible: offlinePayList().length > 0">
+                                                    <h3 data-bind="style:{'padding-left':payList().length <= 0?'0':'23px'}"><i data-bind="visible:payList().length <= 0">1</i>请选择线下支付通道：</h3>
+                                                    <div class="rbank-info other-info" data-bind="css: 'pay_'+currentPayType()">
+                                                        <div class="top clear" data-bind="foreach: offlinePayList">
+                                                            <a class="clo-item on" href="javascript:;" data-bind="click:$parent.tabCurrentThreePayType.bind($parent, $data), css: {on: $parent.currentThreePay()==$data}">
+                                                                <i class="rbank-icon"></i><label data-bind="text:BankName"></label>
+                                                                <i class="rbank-icon mark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-bind="visible:!isOffline()">
+                                                        <div data-bind="visible: banksList().length > 0">
+                                                            <h3><i>2</i>选择银行：</h3>
+                                                            <div class="rbank-info other-info net-pay">
+                                                                <div class="top clear" data-bind="foreach:banksList">
+                                                                    <a class="clo-item on" href="javascript:;" data-bind="click:$parent.currentBank.bind($parent, $data), css: {on: $parent.currentBank() == $data}">
+                                                                        <b class="bank-ico zgyh" data-bind="css: className"></b>
+                                                                        <i class="rbank-icon mark"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <h3><i data-bind="text:banksList().length > 0?(3):2">3</i>充值金额：<span class="note">单笔最低存款金额: <font class="red" data-bind="text:minAmount()">100</font>元以上；<font class="red" data-bind="text:maxAmount()">3000</font>元以下</span></h3>
+                                                    <div class="acc-main clear other-acc">
+                                                        <div class="main-l">
+                                                            <dl>
+                                                                <dt>&nbsp;</dt>
+                                                                <dd>
+                                                                    <input type="text" data-bind="textinput: amount,event:{blur:amountInputBlur.bind($data),focus:hideSubmitButton}" />
+                                                                    
+                                                                    <span data-bind="visible: currentThreePay() && currentThreePay().IsCharge">使用该支付方式，需要承担入款手续费 <label style="color:red" data-bind="text:currentThreePay()? (currentThreePay().Charge||0):0"></label>%</span>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl data-bind="visible:isRepeatAmountIn30m()>1">
+                                                                <dt>&nbsp;</dt>
+                                                                <dd>
+                                                                    <span data-bind="visible:isRepeatAmountIn30m()===3">正在核对数据中，请稍后</span>
+                                                                    <span style="color:#f00;" data-bind="visible:isRepeatAmountIn30m()===2,text:checkAmountError"></span>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt>&nbsp;</dt>
+                                                                <dd>
+                                                                    <a class="rbank-btn" href="javascript:;" data-bind="click:submit.bind($data), css:{disabled:payList().length <= 0}, enable:payList().length > 0,attr:{style:isRepeatAmountIn30m()===1?'':'background:#ccc'}">立即充值</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-bind="visible: isOffline()">
+                                                    <div class="clear">
+                                                        <div>
+                                                            <h3><i>2</i>填写转账资料：<span class="note">单笔最低存款金额: <font class="red" data-bind="text:minAmount()">100</font>元以上；<font class="red" data-bind="text:maxAmount()">3000</font>元以下</span></h3>
+                                                            <div class="acc-main clear other-acc2">
+                                                                <div class="main-l">
+                                                                    <table class="acc-sub" style="width:auto;float:left">
+                                                                        <tr>
+                                                                            <td>收款账号：</td>
+                                                                            <td><label data-bind="text: currentThreePay()?currentThreePay().CardNo:''"></label>(请转账至此账号)</td>
+                                                                            <td data-bind="visible:hasSubmit()">
+                                                                                <span class="span-but">
+                                                                                    <a class="need-copy" href="javascript:;" data-bind="attr: {'data-clipboard-text': currentThreePay()?currentThreePay().CardNo:''}">复制</a>
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr >
+                                                                            <td>收款人：</td>
+                                                                            <td><label data-bind="text: currentThreePay()?currentThreePay().Holders:''"></label></td>
+                                                                            <td data-bind="visible:hasSubmit()">
+                                                                                <span class="span-but">
+                                                                                    <a class="need-copy" href="javascript:;" data-bind="attr: {'data-clipboard-text': currentThreePay()?currentThreePay().Holders:''}">复制</a>
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr >
+                                                                            <td>收款银行：</td>
+                                                                            <td><label data-bind="text: currentThreePay()?currentThreePay().Branch:''"></label></td>
+                                                                            <td data-bind="visible:hasSubmit()">
+                                                                                <span class="span-but">
+                                                                                    <a class="need-copy" href="javascript:;" data-bind="attr: {'data-clipboard-text': currentThreePay()?currentThreePay().Branch:''}">复制</a>
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>存入金额：</td>
+                                                                            <td>
+                                                                                <input type="text" data-bind="textinput:offAmount, enable:!hasSubmit(), event: {blur:amountInputBlur.bind($data)}" style="width:140px;" />
+                                                                            </td>
+                                                                            <td data-bind="visible:hasSubmit()">
+                                                                                <span class="span-but">
+                                                                                    <a class="need-copy" href="javascript:;" data-bind="attr: {'data-clipboard-text': offAmount}">复制</a>
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><span data-bind="text: realNameTitle"></span>：</td>
+                                                                            <td><input type="text" data-bind="textinput: offRealName, enable:!hasSubmit()" style="width:140px;" /></td>
+                                                                            <td data-bind="visible:hasSubmit()">
+                                                                                <span class="span-but">
+                                                                                    <a class="need-copy" href="javascript:;" data-bind="attr: {'data-clipboard-text': offRealName}">复制</a>
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr data-bind="visible:!hasSubmit()">
+                                                                            <td colspan="2">
+                                                                                <p style="margin-top: 10px;" data-bind="visible: currentThreePay() && currentThreePay().IsCharge">使用该支付方式，需要承担入款手续费 <label style="color:red" data-bind="text:currentThreePay()? (currentThreePay().Charge||0):0"></label>%</p>
+                                                                                <a class="rbank-btn" href="javascript:;" data-bind="click: preference.bind($data), css:{disabled: isSubmiting()}">立即充值</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <div style="float:left; padding-left: 10px;" data-bind="visible:!hasSubmit()">
+                                                                        <p style="line-height:37px;"><font class="red">*请务必按照此账号转账，若误充导致资金受损，概不负责</font></p>
+                                                                        <p style="line-height:37px;">&nbsp;</p>
+                                                                        <p style="line-height:37px;">&nbsp;</p>
+                                                                        <p style="line-height:37px;">
+                                                                                <font class="red">*此处金额必须与您实际转账金额一致，否则无法自动到账</font>
+                                                                        </p>
+                                                                        <p style="line-height:37px;" data-bind="visible:!needNumber()"><font class="red">*此处姓名必须与您转账时所填写姓名一致，否则无法自动到账</font></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div data-bind="visible:hasSubmit()&&hasQRCodeImg()">
+                                                            <h3><i>3</i>请扫描二维码：</h3>
+                                                            <div>您的订单已提交, 请扫描下面二维码进行转账, 财务收到款项后1-3分钟内为您加入额度</div>
+                                                            <div class="acc-main clear">
+                                                                    <div class="code-img  code-img1" style="width:200px;margin-top:10px;">
+                                                                        <p style="text-align:center">(二维码仅限此次使用)</p>
+                                                                        <img src="" width="197" height="197" data-bind="attr:{src:hasQRCodeImg()?('data:image/jpeg;base64,'+currentThreePay().QRCodeImg):''}" alt="二维码扫描支付" />
+                                                                    </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div data-bind="visible:hasSubmit()&&!hasQRCodeImg()">
+                                                            此公司没有提供二维码, 请根据上步中的收款账号[<span style="color: red;" data-bind="text: currentThreePay()?currentThreePay().CardNo:''"></span>]进行转账
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        
+                                                        <div class="acc-txt" data-bind="visible: currentPayType() == 1">
+                                                            <h4>注意事项：</h4>
+                                                            <p>特别说明：由于微信之间的转账到账时间不同，需要等待，一般最迟<font class="red">2小时内</font>会确认到账。</p>
+                                                            <p>*务必正确填写充值金额，和网银昵称</p>
+                                                            <p>*转账网银的昵称写错或者忘写，请把转账的完整截图提交给客服人员处理，处理完成立即上分</p>
+                                                            <p>*如有疑问，请联系在线客服</p>
+                                                        </div>
+                                                        
+                                                        <div class="acc-txt" data-bind="visible: currentPayType() == 2">
+                                                            <h4>注意事项：</h4>
+                                                            <p>*请您准确无误按照要求填写入款申请，否则无法自动到账，影响您的充值；</p>
+                                                            <p>*若5分钟内未到账，请您提供您的<font class="red">【会员信息】</font>，<font class="red">【转账备注内容】</font>，以及<font class="red">【微信转账成功截图】</font>给客服，以便给您及时处理；</p>
+                                                            <p>*此二维码仅限此次使用，切勿保存该二维码，若转入过期二维码导致资金受损，本公司概不负责；</p>
+                                                            <p>*转账之后，填写入款申请，点击<font class="red">【立即充值】</font> 尽快提交，若不提交，无法自动到账。</p>
+                                                        </div>
+                                                        
+                                                        <div class="acc-txt" data-bind="visible: currentPayType() == 3">
+                                                            <h4>注意事项：</h4>
+                                                            <p>*请您准确无误按照要求填写入款申请，否则无法自动到账，影响您的充值；</p>
+                                                            <p>*若5分钟内未到账，请您提供您的<font class="red">【会员信息】</font> ，<font class="red">【转账备注内容】</font>，以及<font class="red">【支付宝转账成功截图】</font>给客服，以便给您及时处理；</p>
+                                                            <p>*此二维码仅限此次使用，切勿保存该二维码，若转入过期二维码导致资金受损，本公司概不负责；</p>
+                                                            <p>*转账之后，填写入款申请，点击<font class="red">【立即充值】</font>尽快提交，若不提交，无法自动到账。</p>
+                                                        </div>
+                                                        
+                                                        <div class="acc-txt" data-bind="visible: currentPayType() == 4">
+                                                            <h4>注意事项：</h4>
+                                                            <p>*请您准确无误按照要求填写入款申请，否则无法自动到账，影响您的充值；</p>
+                                                            <p>*若5分钟内未到账，请您提供您的<font class="red">【会员信息】</font> ，<font class="red">【转账备注内容】</font>，以及<font class="red">【财付通转账成功截图】</font>给客服，以便给您及时处理；</p>
+                                                            <p>*此二维码仅限此次使用，切勿保存该二维码，若转入过期二维码导致资金受损，本公司概不负责；</p>
+                                                            <p>*转账之后，填写入款申请，点击<font class="red">【立即充值】</font>尽快提交，若不提交，无法自动到账。</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="cz-loading" data-bind="visible: isLoading()">
+                                                <h3>数据加载中, 请稍候.....</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form style="display:none;" method="get" id="rechargeSubmitForm" target="_blank" action="/Recharge/GoToPay">
+                    
+                    <input type="hidden" readonly="readonly" id="paymentId" name="paymentId" data-bind="value:currentThreePayID" />
+                    
+                    <input id="payAmount" name="amount" data-bind="value:amount" type="text" readonly="readonly" style="border:none;background:none;color:#C7C5C5;padding:0;" />
+                    
+                    <input type="hidden" readonly="readonly" id="code" name="code" data-bind="value:currentBankCode" />
+                    
+                    <input type="hidden" readonly="readonly" id="choicePre " name="choicePre" data-bind="value:choicePre" />
+                </form>
+            </div>
+            <script type="text/html" id="WithdrawalpwdDialog">
+                尊敬的会员您好：
+                <br />感谢您选择娱乐！为了您的资金安全，请在首次入款时设置您的取款密码，已确保您的资金安全使用！谢谢合作！
+                <br />
+                <div id="withdrawalpwd" class="reg-select-box">
+                    <select class="sel reg-select valid">
+                        <option></option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                    </select>
+                    <select class="sel reg-select valid">
+                        <option></option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                    </select>
+                    <select class="sel reg-select valid">
+                        <option></option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                    </select>
+                    <select class="sel reg-select valid">
+                        <option></option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                    </select>
+                </div>
+            </script>
+            <!--支付2.0JS-->
+            <script>
+                var initPayType = 1;
+                initPayType == -1 && (initPayType = '');
+                var orderNumber = '95601271405194897804';
+                var number = '86V22H';
+                var typeCode = 0;
+                var companySiteName = '';
+                var errmsg = '';
+            </script>
+            <!--[if lt IE 9]>
+            <script src="https://zy11sbsbqt.lfjieweisi.com//Scripts/Util/zclip/jquery.zclip.min.js?2b66d6ba88"></script>
+            <script>var isLTIE9 = true</script>
+            <![endif]-->
+            <script type="text/javascript" src="/js_new/common/clipboard.min.js?0adb4fc1c8"></script>
+            <script src="/js_new/Recharge/OnlinePayment.js?6967b52205"></script>
+        </div>
+    </div>
+    <div id="SEARCH-TIP" style="display:none;">
+        <div class="mask"></div>
+        <div class="popup tips-popup">
+            <div class="popup-head">
+                <span>提示</span>
+            </div>
+            <div class="popup-body">
+                <p>查询中,请您耐心等待.....</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">var SignalrSite = 'https://zycccppp.websocketcdn.com:8819/signalr', iis = 'https://zy11sbsbqt.lfjieweisi.com/';</script>
+    <script src="/js_new/common/jquery.signalR-2.1.1.min.js?40e112173f"></script>
+    <script src="/js_new/WG.RegisterUser.js?78b9bba0bc"></script>
+    <script>
+        $(function () {
+            //点击提现前, 调用接口, 判断是否可以提款
+            $('#jGetMoney, .jGetMoney').on('click', function (evt) {
+                $.ajax({
+                    url: '/Withdrawal/ValidateEncashment',
+                    cache: false,
+                    success: function (json) {
+                        if (json.status) {
+                            window.location.href = json.url;
+                        }
+                        else {
+                            utils.tip(json.info);
+                        }
+                    }
+                });
+                evt.preventDefault();
+                return false;
+            });
+            var menuVM = function () {
+                this.init = function (id) {
+                    this.getData();
+                    ko.applyBindings(this, $("#" + id)[0]);
+                    return this;
+                },
+                    this.credit = ko.observableArray(),
+                    this.official = ko.observableArray(),
+                    this.isInitMenu = false,
+                    this.getData = function () {
+                        var that = this;
+                        $.ajax({
+                            url: '/home/gameinfolist',
+                            type: 'GET',
+                            dataType: 'JSON',
+                            success: function (data) {
+                                if (data.length) {
+                                    that.isInitMenu = true;
+                                    that.formatData(data);
+                                }
+                            }
+                        });
+                    },
+                    this.formatData = function (data) {
+                        var credit = [], official = [];
+                        $.each(data, function (index, value) {
+                            var len = value.GameInfoList.length;
+                            $.each(value.GameInfoList, function (i, v) {
+                                v.FGameID = v.FGameID - 0;
+                                v.FSort = v.FSort - 0;
+                                v.FGroupId == 3 ? official.push(v) : credit.push(v);
+                            });
+                        });
+
+                        // 先根据游戏id排序，再根据sort排序
+                        credit = utils.arrSortByKey(credit, ['FGameID', 'FSort']);
+                        official = utils.arrSortByKey(official, ['FGameID', 'FSort']);
+                        
+                        this.credit(credit);
+                        this.official(official);
+                        return 
+                    }
+            };
+            var vm = new menuVM().init("lot_sec_menu");
+            var time = 0, menuBox = $('#lot_sec_menu');
+            $("#gameListBtn,#lot_sec_menu").hover(function () {
+                menuBox.stop(true, true).slideDown(300);
+                clearTimeout(time);
+            }, function () {
+                time = setTimeout(function () {
+                    menuBox.stop().slideUp(100);
+                }, 300);
+            });
+            utils && utils.unreadMessages && utils.unreadMessages();
+        });
+    </script>
+</body>
+
+</html>
+

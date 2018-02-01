@@ -1,0 +1,400 @@
+.clear_fix:before, .clear_fix:after { content: ""; display: table; }
+.clear_fix:after { clear: both; }
+
+@media screen and (max-device-width:480px) {
+    input[type="button"], input[type="submit"], input[type="reset"] { -webkit-appearance: none; }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    input[type="button"], input[type="submit"], input[type="reset"] { /*-webkit-appearance:none;*/ }
+}
+
+.gamePlay { position: absolute; right: 0; top: 0; }
+.gamePlay a { display: block; width: 101px; height: 32px; margin-top: 7px; }
+
+.Bonus { height: 32px; padding: 3px 0; }
+.content .Bonus span { height: 16px; display: block; line-height: 16px; text-align: center; float: none; }
+
+.content .drawNumber { /*float: left;*/ font-weight: 700; padding-left: 10px; }
+.content .drawNumber span { margin: 0 10px; font-size: 14px; }
+.content .drawNumber i { font-style: normal; }
+.content .drawNumber button { height: 24px; line-height: 18px; padding: 0 5px; margin: 1px 0; width: auto; height: 23px; line-height: 20px; border: none; margin-top: 2px; border-radius: 4px; }
+.content .now_time { display: none; }
+
+.TeA, .TeB, .toradora_bar, .Drawn, .ExtraDrawn { width: 900px; }
+.Drawn, .ExtraDrawn { height: 489px; }
+.toradora_bar { float: none; position: relative; z-index: 3; }
+
+.txt_section1 li.btn_ok .bd { height: 36px; padding-left: 1px; }
+
+.content .ball_box .ball { padding: 0; margin: 0; }
+.content ul .amount { width: 63px; height: 17px; line-height: 17px\9; border: none; padding: 2px 0; }
+
+
+
+.btn_white { width: 52px; }
+.txt_section2 { height: 11px; margin-right: 1px; }
+.TeA .txt_section2 { border-right: none; }
+
+.content .sb_txt .odds { width: 55px; }
+.content .sb_txt .ball_box span, .content .tx_txt .ball_box span { width: 27px; font-weight: 500; font-size: 14px; }
+.content .sb_txt .s1_nav span { height: 19px; }
+
+.ExtraDrawn .main_nav { height: 25px; overflow: hidden; }
+
+.diy-slct-sum .btn, .dss-btn a { width: 50px; height: 17px; padding: 3px 0; display: inline-block; border-width: 0 1px 1px 1px; border-style: solid; text-shadow: initial; line-height: 1; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; vertical-align: middle; }
+.diy-slct-sum a.btn, .dss-btn a { line-height: 17px; }
+ 
+.content .lm_bom li { height: 25px; line-height: 25px; font-size: 12px; width: 81px; padding-left: 20px; }
+
+@-moz-document url-prefix() {
+    .content .lm_bom .bz_nav input, .content .lm_bom .lx_nav input { padding: 0 2px; }
+}
+.content .lm_bom .bz_nav input { }
+.content .lm_bom label { float: left; font-weight: bold; }
+
+.Multi .odds, .Multi .border_002 { border-right: none; }
+.Multi .amount_pane { height: 32px; font-weight: bold; }
+.Multi .border_003 { height: 31px; }
+
+/*色波*/
+.colorball .s1_nav li { width: 100%; border-width: 0 0 1px 1px; }
+.colorball .s1_nav li .bd { height: 19px; line-height: 19px; border-width: 0; }
+
+/*正码1－6*/
+
+.hx_txt .ball_box .ball { width: 28px; height: 36px; line-height: 36px; }
+
+.bz_nav .last { width: 200px; }
+
+/*正特 right*/
+.Drawn .txt_section1, .ExtraDrawn .txt_section1 { width: 900px; float: left; }
+.Drawn .txt_section1 { height: 473px; }
+.ExtraDrawn .txt_section1 { height: 438px; }
+.quickSlct li { height: 19px; line-height: 19px; float: left; display: inline; }
+.quickSlct .quickSlct_btn input { border: none; }
+.quickSlct .buttom1 { padding: 2px 0; }
+.quickSlct .buttom2, .quickSlct .buttom3, .quickSlct .buttom4 { padding: 2px 0; }
+.quickSlct .sec2_right { height: 145px; padding: 0 6px; }
+.quickSlct .sec2_right .text_input { padding: 5px 0 3px 0; }
+.quickSlct { text-align: center; height: 520px; }
+.quickSlct_btn { padding: 6px; }
+
+/*1肖*/
+.second-Nav { text-align: center; }
+
+/*自选不中*/
+.bz_txt ul .amount { border: none; }
+
+/* 合肖 */
+
+.hx_nav .main_nav { padding: 0; }
+
+/* 龙虎斗 toradora */
+.toradora { position: relative; /*height:410px;*/ z-index: 3; }
+
+.toradora li.offset-0 { margin-left: 74px; }
+.toradora li.offset-1 { margin-left: 149px; }
+.toradora li.offset-2 { margin-left: 223px; }
+.toradora li.offset-3 { margin-left: 297px; }
+.toradora li.offset-4 { margin-left: 371px; }
+
+
+.waybill-tab a { float: left; width: 60px; height: 23px; line-height: 23px; padding-bottom: 2px; margin: 2px; text-align: center; }
+
+.quick-bet ul { *width: 228px; }
+.quick-bet input.btn-2, .quick-bet input.btn-4 { width: 56px; height: 23px; margin: 1px 0 0 1px; *float: left; *display: inline; }
+.quick-bet input.btn-3 { width: 36px; height: 23px; }
+.quick-bet p { padding: 10px 8px; }
+.quick-bet .quickTextarea { width: 209px; margin: 0 7px; height: 120px; }
+.quickorder_bar .txt { margin: 5px; padding: 3px; }
+.quickorder_bar .txt textarea { width: 100%; border: 0; resize: none; outline: none; height: 200px; overflow: auto; }
+.quickorder_bar .btn { text-align: center; margin: 10px 0; }
+.quickorder_bar .btn input { margin: 0 5px; width: 79px; height: 29px; padding: 0 0 3px 0; border: none; outline: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.quickorder_bar p { line-height: 1.4; margin: 0px 5px 7px 5px; font-size: 12px; }
+
+/* 规则说明 begin */
+.dn { display: none; }
+.gz_tab li { float: left; list-style: none; height: 28px; line-height: 28px; }
+.gz_tab li a { padding: 0 5px; display: block; }
+.gz_tab li.curr a { border-width: 0 1px; border-style: solid; }
+.rule-box { width: 950px; height: 500px; overflow: hidden; }
+.gz_con { height: 470px; overflow: auto; }
+.b_tit { font-size: 18px; margin: 10px 0; font-family: SimHei,SimSun; }
+span.gz_tit { margin: 5px 0; font-size: 14px; }
+.fnt_bold { font-weight: bold; }
+.gz_tab li a:hover { text-decoration: underline; }
+/* 规则说明 end */
+
+
+/*倒计时*/
+.flip-clock-wrapper ul { margin: 1px 0 1px 1px; }
+.flip-clock-wrapper ul li a div div.inn { text-shadow: none; }
+
+.btn-wrap1 { text-align: center; }
+.btn-wrap1 label { height: 17px; line-height: 17px\9; padding: 2px 0; margin-top: 6px; display: inline-block; vertical-align: middle; }
+.fast-amount { border: none; border-radius: 3px; width: 63px; height: 17px; line-height: 17px\9; padding: 2px 0; margin-top: 6px; display: inline-block; }
+
+.fast-select .border_003,
+.fast-select .amount_pane { display: none; }
+.fast-select .border_001,
+.fast-select .border_002,
+.fast-select li .ball,
+.fast-select li .ball_m,
+.fast-select li .odds { width: 49%; }
+.fast-select .tx_txt .ball_m,
+.fast-select .tx_txt .odds { width: 20%; }
+.fast-select .s1_nav .border_002 { border-right: none; }
+
+
+/**样式*/
+.ball_info ul { padding: 0; height: 45px; }
+.ball_info li a { height: 45px; line-height: 45px; }
+
+.content .sumBtn_wrap .btn_red { height: 27px; margin: 9px 3px; }
+
+.content .sumBtn_wrap .live { height: 27px; margin: 9px 3px; line-height: 27px; width: 60px; padding: 0 3px 0 33px; }
+.bet-wrap { padding: 1px 1px 0 0; }
+
+.buyBonus { padding: 1px 0px 2px 35px; height: 38px; margin: 2px 0 0 15px; }
+.buyBonus a { width: 22px; height: 22px; margin: 8px 2px; }
+
+.content .bd span { height: 36px; line-height: 36px; }
+.content .bd .amount_pane { height: 26px; }
+.content .s1_nav span { line-height: 18px; height: 19px; }
+
+.txt_section1 li.btn_ok .bd { height: 36px; }
+
+.content .s1_txt .bd { margin: 0; }
+
+.diy-slct-sum .btn, .dss-btn a { border: none; }
+
+/*色波*/
+.colorball .s1_nav li .bd { border-width: 0; }
+
+/*正码1－6*/
+.content .zm16_nav li { margin: 0; }
+.hx_nav span input { border: none; }
+
+/*1肖*/
+.second-Nav { }
+
+/*自选不中*/
+.bz_txt ul .amount { border: none; }
+
+/* 合肖 */
+.hx_txt .combo_zodiac .cz_settle { width: 187px; height: 85px; padding: 0; }
+
+/* 龙虎斗 toradora */
+.toradora li { width: 149px; height: 93px; }
+.toradora .t-item { width: 73px; }
+
+.container .rightbar { width: 238px; margin-top: -45px; }
+.rightbar .title a { margin-top: 0; height: 45px; }
+.quick-bet { padding: 5px 0 0 4px; }
+.quick-bet textarea { width: 205px; height: 72px; margin: 0 7px; }
+.quick-bet .quickTextarea { width: 209px; margin: 0 7px; height: 120px; }
+
+.slct-btn { padding: 2px 0; }
+.slct-btn .btn { border: none; margin: 6px 0 0 0; width: 101px; }
+
+/*倒计时*/
+.fast-amount { margin-top: 0; }
+
+.sumBtn_wrap1 { float: right; margin-top: -45px; margin-right: 237px; width: auto; }
+.rightM0 { margin-right: 0 !important; }
+
+
+.ball_info{background: #e2e0dd;}
+/*.content .sumBtn_wrap .live:hover{color:#1491c1;}*/
+
+
+/*正码1－6*/
+.bz_txt .border_003{border-right:1px solid #a4a4a4;}
+
+
+/* 合肖 */
+.hx_txt .combo_zodiac .cz_3 label{color:#fff;}
+
+
+/*倒计时*/
+.fast-amount{background:url(/Content/mapping/yuducaipiao/images/amount.png?88125cadac) no-repeat;color:#fff}
+
+
+ /**样式*/
+ .con_box{background:#fff;}
+
+.redtext{color:red !important;}
+.bluetext{color:rgb(12, 128, 156)!important;}
+.greentext{color:rgb(10, 170, 10)!important;}
+
+.ball_info li a {color:#4d4d4d;}
+.ball_info li.curr a{background:#ffba00;color:#fff;}
+.content .sumBtn_wrap{background:#f6f4f4;/*border-bottom:1px solid #6a4138;*/}
+.content .sumBtn_wrap .btn_red{background:url(/Content/mapping/yuducaipiao/images/sumBtn2.png?7498223dc3) no-repeat center top;color:#919090;}
+.content .sumBtn_wrap .btn_red:hover,.content .sumBtn_wrap .active{background-position:center bottom;color:#fff}
+.content .sumBtn_wrap .live{color:#fff;background:url(/Content/mapping/yuducaipiao/images/live-btn.png?92f6945ff6) no-repeat left top;color:#919090;}
+.content .sumBtn_wrap .live:hover{color:#fff;background-position:left bottom;}
+
+.gamePlay a{background-position:0 -731px;}
+
+.ranger .ui-widget,.ranger .ui-handle,.buyBonus,.buyBonus a{background:url(/Content/mapping/yuducaipiao/images/base-ico.png?61b2ec028e) no-repeat;}
+
+.BonusPercen,.Bonus,.buyBonus {color:#3c3c3c;}
+.buyBonus{background-position:5px -224px;}
+.buyBonus .minus{background-position:0 -90px;}
+.buyBonus .plus{background-position:0 -112px}
+.ranger .ui-widget{background-position:15px -510px;}
+.ranger .ui-handle{background-position: 0 -262px;}
+
+.content .btn{border:none;background:url(/Content/mapping/yuducaipiao/images/btn_ok.png?c60d22ca9a) no-repeat -79px center;}
+.content .btn-green{background-position:left center;}
+.content li .ball{color:#fff;text-shadow:0 1px 2px #464646;}
+.content li .ball_m {color:#181818;}
+.content .s1_nav .ball_m{color:#181818;}
+.odds{color:#FF0000;}
+.content .ball_box .ball{border:none;}
+.content ul .amount { border:1px solid #bfbfbf;background:#fff;border-radius:3px;}
+
+.ball{background:url(/Content/mapping/yuducaipiao/images/ball.png?3f05420f4b) no-repeat;}
+.ball_1, .ball_2, .ball_7, .ball_8, .ball_01, .ball_02, .ball_07, .ball_08, .ball_12, .ball_13, .ball_18, .ball_19, .ball_23, .ball_24, .ball_29, .ball_30, .ball_34, .ball_35, .ball_40, .ball_45, .ball_46{background-position:center -37px; }
+.ball_5, .ball_6,.ball_05, .ball_06, .ball_11, .ball_16, .ball_17, .ball_21, .ball_22, .ball_27, .ball_28, .ball_32, .ball_33, .ball_38, .ball_39, .ball_43, .ball_44, .ball_49 {background-position:center -1px;}
+.ball_3, .ball_4, .ball_9,.ball_03, .ball_04, .ball_09, .ball_10, .ball_14, .ball_15, .ball_20, .ball_25, .ball_26, .ball_31, .ball_36, .ball_37, .ball_41, .ball_42, .ball_47, .ball_48 {background-position:center -73px; }
+.ball_{background:none;}/*号码禁用的时候用到该样式*/
+
+.s1_nav {background:url(/Content/mapping/yuducaipiao/images/nav-bg.png?7321c0702d) repeat-x 0 -36px;border-top:1px solid #e9e8e8}
+.s1_nav li {background:none;}
+.s1_nav .bd{border-left:1px solid #fff;border-right:1px solid #a4a4a4;}
+.s1_nav span {color:#000000;}
+.s1_nav .border_001,.s1_nav .ball_m{border-right:1px solid #a4a4a4;}
+.s1_nav .border_002,.s1_nav .odds,.s1_nav .amount_pane{border-left:1px solid #fff;border-right:1px solid #a4a4a4;}
+.s1_nav .border_003,.s1_nav .ball_box{border-left:1px solid #fff;}
+
+.content .s1_txt .bd{border-right:1px solid #c9c7c7;border-bottom:1px solid #c9c7c7;}
+.content .sb_txt li { background:#fff;border-bottom:1px solid #c9c7c7}
+.content .s1_nav li{background:none;border:none;}
+
+.content .main_nav input{background:url(/Content/mapping/yuducaipiao/images/btn.png?293d5f190c) no-repeat;color:#585858;}
+.content .main_nav input.active{background-position:center -29px;color:#fff;}
+.content .main_nav input.disabled{background-position: center -58px;color:#888888;}
+
+.ck-box{background:url(/Images/checkbox_bg.png?4af4c4c073) no-repeat;}
+.ck-box-default{background-position:center 8px;}
+.ck-box-checked{background-position:center -27px;}
+.ck-box-disabled{background-position:center -62px;}
+
+.btn-wrap{color:#fff;}
+.lm_bom {color:#585858}
+.diy-slct-sum .btn,.dss-btn a{background:#414141;color:#fff;}
+.dss-btn a.btn-mini{background:#445994;}
+
+.content .lm_bom .bz_nav input,.content .lm_bom .lx_nav input{border:none;background:url(/Content/mapping/yuducaipiao/images/btn2.png?b0d2515be9) no-repeat;color:#585858;}
+.content .lm_bom .bz_nav input.txt-red,.content .lm_bom .lx_nav input.active{background-position:0 -27px;color:#fff}
+.content .lm_bom .bz_nav input.disabled,.content .lm_bom .lx_nav input.disabled{background-position: center -54px;color:#888;}
+.content .lm_bom .last .sum{border:1px #7a7775 solid;}
+
+.Multi .odds,.Multi .border_002{border-right:none;}
+
+
+/*正码1－6*/
+.content .zm16_nav li{background:#445994;border-left:1px solid #fff;color:#fff;}
+.txt-gray{color:#DCDCDC}
+.hx_nav span input{background:url(/Content/mapping/yuducaipiao/images/btn.png?293d5f190c) no-repeat;color:#585858;}
+.hx_nav span input.disabled{background-position: center -58px;}
+.hx_nav span input.active{background-position: center -29px;color:#fff;}
+.bz_txt .odds,.bz_txt .border_002{}
+.bz_txt .amount_pane{color:#FF0000}
+
+
+/*1肖*/
+.second-Nav{background:#445994;color:#fff;text-shadow:0px 1px 1px #131313;}
+
+
+/*自选不中*/
+.bz_txt ul .amount{}
+
+
+/* 合肖 */
+.hx_txt .combo_zodiac li .bd{border:1px solid #c9c7c7;}
+.hx_txt .combo_zodiac .cz_title{background:#445994;color:#fff;text-shadow:0px 1px 1px #131313;}
+.hx_txt .combo_zodiac .cz_3 label{color:#585858;}
+.hx_txt .combo_zodiac .cz_4{color:#ff0000;}
+.hx_txt .combo_zodiac .cz_settle{color:#585858;border:1px solid #c9c7c7;}
+
+
+/* 龙虎斗 toradora */
+.toradora .t-head{background:#445994;color:#fff;text-shadow:0px 1px 1px #131313;}
+.toradora .t-box{border:1px solid #c9c7c7;}
+.toradora .t-odds{color:#FF0000;}
+.toradora .t-item .txt-red,.toradora .t-item .txt-blue{color:#fff; }
+.toradora .t-item .txt-red{color: #FF4848;}
+.toradora .t-item .txt-blue{color: #0020FF;}
+.toradora .t-input input{background:#fff;border:1px solid #c9c7c7;border-radius:2px;}
+
+.container .rightbar{border-left:1px solid #959595;}
+.rightbar .title{border-bottom:1px solid #959595;}
+.rightbar .title a{background:url(/Content/mapping/yuducaipiao/images/rightbar.png?1664e86071) no-repeat left center #353535;color:#fff;margin-top:0;}
+.rightbar .title .QuickOrder{background-position:right center;}
+.rightbar .title .active{background-color:#445994;}
+.quick-bet li input{border:1px solid #bfbfbf;color:#181818;background:none;}
+.quick-bet input.btn-checked{background-color:#fff600;color:#1D1D1B;}
+.quick-bet span{color:#181818;}
+.quick-bet p{color:#585858;}
+.quick-bet textarea{border:1px solid #c9c7c7;background:none;color:#313131;border-radius:3px}
+.quick-bet .sum-txt{border:1px solid #c9c7c7;background:none;color:#181818;}
+.slct-btn .btn,.sum-btn{background:url(/Content/mapping/yuducaipiao/images/rightbar-btn.png?2f8afbc2f1) no-repeat;}
+.slct-btn .Reset{background-position:0 -41px;}
+.slct-btn .SlctAll{background-position:-102px -41px;}
+.slct-btn .Cancel{ background-position:0  -75px;}
+.slct-btn .Sub{ background-position: -104px -75px; }
+
+.quickorder_bar .txt { border:1px solid #064065;background:none;}
+.quickorder_bar .txt textarea { background:none;color:#fff;}
+.quickorder_bar .btn input { color:#098495;border:none; }
+.main-code{background:url(/Content/mapping/yuducaipiao/images/main-code.png) no-repeat 3px center;}
+
+
+/* 规则说明 begin */
+
+.gz_tab {
+    background: #eee;
+    border: 1px solid #ddd;
+}
+.gz_tab li {
+    background: #eee;
+}
+.gz_tab li a {
+    color: #0F1011;
+}
+.gz_tab li.curr a {
+    color: #ff6a00;
+    background: #fff;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: transparent #ccc;
+}
+span.gz_tit { color: #ff0000; }
+.col_red { color: #ff0000; }
+.col_blue { color: #0000ff; }
+.col_green { color: #008000; }
+.gz_tab li a:hover { color:#F01011}
+/* 规则说明 end */
+
+
+/* 信用玩法登录 begin */
+.ui-tip-yes-box{
+    color: #888;
+}
+/* 信用玩法登录 end */
+
+
+/*倒计时*/
+.flip-clock-wrapper ul li a div div.inn{
+    background:url(/Content/mapping/yuducaipiao/images/flip.png?f6fcc5ce0c);
+    color:#000;
+}
+.flip-clock-wrapper ul li a div.up:after{background-color:#021f38;}
+
+.selected-item{background-color:#FFF8B6 !important;background-image:none!important;}
+
+.fast-amount{border:1px solid #bfbfbf;background:#fff;border-radius:3px;color:#000;}

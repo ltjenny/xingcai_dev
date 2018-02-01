@@ -1,0 +1,248 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户中心-</title>
+    <link href="/css_new/userCenter/usercenter.css?3eda99ab3b" rel="stylesheet" />
+    <link href="/css_new/usercenter.css?ab5383d759" rel="stylesheet" />
+    <script src="/js_new/common/jquery-1.11.3.min.js?a05f16c4c4"></script>
+    <style type="text/css">
+        /*x068增加单独头部*/
+        .head { position: relative; }
+        .head .logo-wrap { margin: 0; }
+        .top-box .main { width: 100% !important; margin: 0 auto; }
+        .header-main { width: 100% !important; margin: 0 auto; }
+        .bar-left { margin-left: 20px; }
+        .logo { margin-left: 20px; }
+        .bar-right { margin-right: 20px; }
+        .top-online { margin-right: 20px; }
+        /*x068增加单独头部*/
+    </style>
+</head>
+<body class="bg">
+    <div class="head">
+        <div class="logo-wrap"><img src="https://zy11sbsbqt.lfjieweisi.com//content/Default/home/images/logo1.png" /></div>
+        <div class="top_menu">
+            <div class="clear">
+                <a href="/OffcialOtherGame/Index/26" id="gameListBtn" class="games" title="游戏大厅"><span>游戏大厅</span></a>
+                <a href="/" class="getout" title="返回首页"><span>返回首页</span></a>
+                <a href="http://tb.53kf.com/webCompany.php?arg=10147846&style=1&fromthirdservice=webapp" target="_blank" class="service" title="在线客服">
+                    <span class="new-msg" id="NewMsg">在线客服</span>
+                </a>
+                <a href="/Help/Betq?gameId=0" class="rule" id="Rule" title="规则说明"><i></i><span class="rule_description">规则说明</span></a>
+                <a href="/Help/Techq" class="help" title="游戏帮助"><i></i><span class="play_help">游戏帮助</span></a>
+                <a title="登出账号" class="btn-login-out" href="/Home/UserLogout"><span>登出账号</span></a>
+            </div>
+            <!--下拉游戏选择-->
+            <div class="menu-child" style="display:none;" id="lot_sec_menu">
+                <div class="gamelist clear">
+                    <div class="official_play">
+                        <div class="gamelist_tit clear">
+                            <h1 class="red_style">官方玩法</h1>
+                        </div>
+                        <div class="high_wrap">
+                            <div class="gamelist_l">
+                                <ul data-bind="foreach:official">
+                                    <li>
+                                        <a class="game_26" data-bind="attr:{href:'/OffcialOtherGame/Index/'+FGameID}"><font data-bind="text:FGameName"></font></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cut-line"></div>
+                    <div class="credit_play">
+                        <div class="gamelist_tit clear">
+                            <h1 class="orange_style">信用玩法</h1>
+                        </div>
+                        <div class="high_wrap">
+                            <div class="gamelist_r">
+                                <ul data-bind="foreach:credit">
+                                    <li>
+                                        <a class="game_1" data-bind="attr:{href:FGameID==1?'/six/index':'/OtherGame/Index/'+FGameID}"><font data-bind="text:FGameName"></font></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="triangles_back"></div>
+            </div>
+            <!--下拉游戏选择 end-->
+        </div>
+    </div>
+    <div class="container clear">
+        <style>
+            .open{
+                display: none;
+            }
+            .w-op{
+                display: none;
+            }
+        </style>
+        <div class="side-left helpMenu" id="helpMenu">
+            <ul class="side_menu">
+                <li >
+                    <a href="/Help/Generalq" class="sidem_b">常见问题</a>
+                </li>
+                <li >
+                    <a href="/Help/Deposit" class="sidem_b">存款帮助</a>
+                </li>
+                <li class=active>
+                    <a href="/Help/Teller" class="sidem_b">取款帮助</a>
+                </li>
+                <li >
+                    <a href="/Help/Techq" class="sidem_b">新手引导</a>
+                </li>
+                <li>
+                    <a class="sidem_b" onclick="showdiv()"><span>玩法介绍</span></a>
+                    <ul class="rulelist" id="show" >
+                        <li data-id="1"><a href="/Help/Betq?gameId=1"><i class="play-ico"></i><span>香港六合彩</span></a></li>
+                        <li data-id="7"><a href="/Help/Betq?gameId=7"><i class="play-ico"></i><span>重庆时时彩</span></a></li>
+                        <li data-id="9"><a href="/Help/Betq?gameId=9"><i class="play-ico"></i><span>天津时时彩</span></a></li>
+                        <li data-id="10"><a href="/Help/Betq?gameId=10"><i class="play-ico"></i><span>新疆时时彩</span></a></li>
+                        <li data-id="13"><a href="/Help/Betq?gameId=13"><i class="play-ico"></i><span>幸运农场</span></a></li>
+                        <li data-id="15"><a href="/Help/Betq?gameId=15"><i class="play-ico"></i><span>北京PK拾</span></a></li>
+                        <li data-id="26"><a href="/Help/Betq?gameId=26"><i class="play-ico official-ico"></i><span>重庆时时彩</span></a></li>
+                        <li data-id="29"><a href="/Help/Betq?gameId=29"><i class="play-ico official-ico"></i><span>北京PK拾</span></a></li>
+                        <li data-id="30"><a href="/Help/Betq?gameId=30"><i class="play-ico official-ico"></i><span>福彩3D</span></a></li>
+                        <li data-id="39"><a href="/Help/Betq?gameId=39"><i class="play-ico official-ico"></i><span>江苏快三</span></a></li>
+                        <li data-id="40"><a href="/Help/Betq?gameId=40"><i class="play-ico official-ico"></i><span>新疆时时彩</span></a></li>
+                        <li data-id="42"><a href="/Help/Betq?gameId=42"><i class="play-ico official-ico"></i><span>天津时时彩</span></a></li>
+                        <li data-id="44"><a href="/Help/Betq?gameId=44"><i class="play-ico official-ico"></i><span>排列三、五</span></a></li>
+                        <li data-id="61"><a href="/Help/Betq?gameId=61"><i class="play-ico official-ico"></i><span>加拿大3.5分</span></a></li>
+                        <li data-id="68"><a href="/Help/Betq?gameId=68"><i class="play-ico official-ico"></i><span>澳洲3分彩</span></a></li>
+                    </ul>
+                </li>
+                <li  style="display:none">
+                    <a href="/Help/about" class="sidem_b">公司简介</a>      
+                </li>
+            </ul>
+            <script src="/js_new/dist/$.ko.js?a876144a3a"></script>
+            <script>
+                $(function () {
+                    var games = {
+                        'ssc': [26, 40, 41, 42, 43],
+                        '11x5': [32, 45, 46],
+                        'kl8': [28],
+                        'k3': [39],
+                        'fc3d': [30],
+                        'pl35': [44],
+                        'pk10': [29],
+                        'six': [1],
+                        'jxssc': [11],
+                        'bjpks': [15],
+                        'xjssc': [10],
+                        'cqks': [13],
+                        'jstb': [22],
+                        'gd11x5': [4],
+                        'gdkc': [5],
+                        'gxks': [6],
+                        'cqssc': [7],
+                        'tjssc': [9]
+                    };
+                    var links = {};
+                    $.each(games, function (key) {
+                        $.each(this, function (index, item) {
+                            links[item] = key;
+                        });
+                    });
+                    var id = location.search.replace("?gameId=", "");
+                    var gameid = isNaN(id) ? 26 : id || 26;
+                    var $rulelist = $('ul.rulelist');
+                    var mapping = {};
+                    $rulelist.children().each(function () {
+                        mapping[$(this).data("id")] = $(this);
+                    });
+
+                    mapping[gameid] && mapping[gameid].addClass('active');
+                    $('#game-' + gameid).show();
+
+                    $rulelist.delegate('>', 'click', function () {
+                        var $this = $(this);
+                        $this.addClass('active').siblings('.active').removeClass('active');
+                        $('#game-' + $this.data('id')).show().siblings().hide();
+                        location.hash = games[$this.data('id')][0];
+                    });
+                });
+                var menuVM = function () {
+                    this.init = function (id) {
+                        this.getData();
+                        ko.applyBindings(this, $("#" + id)[0]);
+                        return this;
+                    },
+                    this.credit = ko.observableArray(),
+                    this.official = ko.observableArray(),
+                    this.isInitMenu = false,
+                    this.getData = function () {
+                        var that = this;
+                        $.ajax({
+                            url: '/home/gameinfolist',
+                            type: 'GET',
+                            dataType: 'JSON',
+                            success: function (data) {
+                                if (data.length) {
+                                    that.isInitMenu = true;
+                                    that.formatData(data);
+                                }
+                            }
+                        });
+                    },
+                    this.formatData = function (data) {
+                        var credit = [], official = [];
+                        $.each(data, function (index, value) {
+                            var len = value.GameInfoList.length;
+                            $.each(value.GameInfoList, function (i, v) {
+                                v.FGroupId == 3 ? official.push(v) : credit.push(v);
+                            });
+                        });
+                        this.credit(credit);
+                        this.official(official);
+                    }
+                };
+                var vm = new menuVM().init("lot_sec_menu");
+                var time = 0, menuBox = $('#lot_sec_menu');
+                $("#gameListBtn,#lot_sec_menu").hover(function () {
+                    menuBox.stop(true, true).slideDown(300);
+                    clearTimeout(time);
+                }, function () {
+                    time = setTimeout(function () {
+                        menuBox.stop().slideUp(100);
+                    }, 300);
+                })
+
+
+                function showdiv() {
+                    if (showdiv_display = document.getElementById('show').style.display == 'none') {
+                        document.getElementById('show').style.display = 'block';
+                    } else {
+                        document.getElementById('show').style.display = 'none';
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="ui-main clear">
+            <div class="con_box">
+                <div class="help-con">
+                    <div class="help-head">
+                        1 您可以通过以下方式提款
+                    </div>
+                    <div class="help-main">
+                        <p>1、会员登陆后点选”提款”或在用户中心点击”提现”。</p><p>2、输入资金密码，确认提款人姓名与本人填写资料相符。</p><p>3、填写取款金额。</p><p>4、确认提款银行帐号与本人填写资料相符。</p><p>5、选择出款银行卡:</p><p>&nbsp; &nbsp;-绑定中国工商银行(优先)、中国农业银行、北京银行、交通银行、中国银行、中国建设银行、中国光大银行、兴业银行、中国民生银行总行、招商银行、中信银行、广东发展银行、中国邮政、深圳发展银行、上海浦东发展银行。</p>
+                    </div>
+                    <div class="help-head">
+                        2 取款注意事项
+                    </div>
+                    <div class="help-main">
+                        <p>1、最低取款为￥100人民币，每日(早上09：00到凌晨02：00)单笔￥20万 取款上限为￥60万人民币,一天3次取款.</p><p>2、御都娱乐保留权利审核会员账户，若有效下注金额未达&quot;每次存款额度&quot;的取款流水要求,则无法提款成功,最低取款流水要求为存款金额的30%流水,如果参与活动,则需要满足活动流水要求才能出款。</p><p>3、本公司如发现有诈骗集团或其它非法组织进入本公司洗钱，本公司风控部门审核后有权拒绝出款。</p><p style="color:red;font-size:large;">注：会员当日流水达到充值金额60%</p><p>【例1】1月1日当下存入1000元；1月2日存入3000元，则有效投注额必须为(1000 +3000)*60%=2400元流水以上才可出款，。</p><p>【例2】若有效投注已达最低存款金额的出款流水要求， 但参加了一个需要流水3000元的活动则需要达到3000元的流水要求才能出款.</p><p>&nbsp;</p><p>**如有任何疑问，欢迎您随时联系在线客服！</p><p>**请注意**各游戏未接受/取消注单，不纳入有效投注计算。彩票游戏，计算有效投注金额。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

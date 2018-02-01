@@ -1,0 +1,415 @@
+.rondell-container {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  font-size: 12px;
+}
+
+.rondell-container.rondell-initializing * {
+  display: none;
+}
+
+.rondell-item {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.rondell-item a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.rondell-item .rondell-item-crop {
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  border-radius: inherit;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.rondell-item img {
+  vertical-align: bottom;
+  display: block;
+  margin: 0 auto;
+}
+
+.rondell-item:hover, .rondell-item:hover div, .rondell-item:hover p {
+  text-decoration: none;
+}
+
+
+.rondell-item-error {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.rondell-item-error p {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.rondell-item-focused, .rondell-item-focused a {
+  cursor: auto;
+}
+.rondell-caption {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:50px;
+  line-height:50px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  vertical-align:middle;
+  text-decoration: none;
+}
+.rondell-caption a {
+  text-decoration: underline;
+}
+.rondell-caption p {
+  margin: 4px 0;
+}
+.rondell-caption.rondell-item-overlay {
+  top: auto;
+  position: absolute;
+  display: none;
+}
+.rondell-container .rondell-item-focused{
+    height:210px !important;
+    top:10px !important;
+    /*background: rgba(0,0,0,0.7) !important;*/
+}
+
+.rondell-control {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  width:20px;
+  height:30px;
+}
+
+/* rondell scrollbar  */
+.rondell-scrollbar {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+}
+.rondell-scrollbar.rondell-scrollbar-bottom {
+  bottom: 10px;
+}
+.rondell-scrollbar .rondell-scrollbar-background {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 10px;
+  height: 1px;
+}
+.rondell-scrollbar .rondell-scrollbar-left,
+.rondell-scrollbar .rondell-scrollbar-right {
+  top: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.rondell-scrollbar .rondell-scrollbar-inner {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+.rondell-scrollbar .rondell-scrollbar-left {
+  left: 6px;
+}
+.rondell-scrollbar .rondell-scrollbar-left .rondell-scrollbar-inner {
+  background-position: 0 -16px;
+}
+.rondell-scrollbar .rondell-scrollbar-right {
+  right: 6px;
+}
+.rondell-scrollbar .rondell-scrollbar-control,
+.rondell-scrollbar .rondell-scrollbar-left,
+.rondell-scrollbar .rondell-scrollbar-right {
+  cursor: pointer;
+  position: absolute;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+}
+.rondell-scrollbar .rondell-scrollbar-control {
+  left: 50%;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  -webkit-transition: left 0.2s linear;
+  -moz-transition: left 0.2s linear;
+  -o-transition: left 0.2s linear;
+  transition: left 0.2s linear;
+}
+.rondell-scrollbar .rondell-scrollbar-control.rondell-scrollbar-dragging, .rondell-scrollbar .rondell-scrollbar-control:hover {
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+}
+
+.rondell-lightbox {
+  z-index: 9998;
+  left: -99999px;
+  position: absolute;
+}
+
+.rondell-lightbox,
+.rondell-lightbox-overlay {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.rondell-lightbox-overlay {
+  position: fixed;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.rondell-lightbox-content {
+  position: fixed;
+  clear: both;
+  left: 50%;
+  top: 0;
+  max-height: 90%;
+  overflow: auto;
+  padding: 10px;
+  z-index: 9999;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.rondell-lightbox-content .rondell-caption,
+.rondell-lightbox-content .rondell-caption.rondell-item-overlay {
+  text-align: left;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 400px;
+}
+.rondell-lightbox-content .rondell-caption a {
+  text-decoration: underline;
+}
+.rondell-lightbox-content .rondell-caption a:hover {
+  text-decoration: none;
+}
+.rondell-lightbox-content .rondell-lightbox-prev,
+.rondell-lightbox-content .rondell-lightbox-next,
+.rondell-lightbox-content .rondell-lightbox-close,
+.rondell-lightbox-content .rondell-lightbox-position {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+  -webkit-transition: opacity 0.2s ease;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition: opacity 0.2s ease 0.1s;
+  -o-transition: opacity 0.2s ease 0.1s;
+  transition: opacity 0.2s ease 0.1s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.rondell-lightbox-content .rondell-lightbox-position {
+  top: 2px;
+  left: 50%;
+  margin-left: -40px;
+  width: 80px;
+  padding: 2px 0 1px;
+  text-align: center;
+  font-weight: bold;
+  cursor: default;
+}
+.rondell-lightbox-content .rondell-lightbox-close {
+  top: 2px;
+  right: 2px;
+}
+.rondell-lightbox-content .rondell-lightbox-prev,
+.rondell-lightbox-content .rondell-lightbox-next {
+  top: 50%;
+}
+.rondell-lightbox-content:hover .rondell-lightbox-prev,
+.rondell-lightbox-content:hover .rondell-lightbox-next,
+.rondell-lightbox-content:hover .rondell-lightbox-close,
+.rondell-lightbox-content:hover .rondell-lightbox-position {
+  opacity: 1;
+}
+.rondell-lightbox-content .rondell-lightbox-prev {
+  left: 2px;
+  background-position: 0 -16px;
+}
+.rondell-lightbox-content .rondell-lightbox-next {
+  right: 2px;
+}
+.tc{
+    text-align:center;
+}
+/* themes */
+/* default theme */
+.rondell-theme-default .rondell-control,
+.rondell-theme-default .rondell-item,
+.rondell-theme-default .rondell-item img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  /*background-color:#000000;*/
+  /*background:rgba(0,0,0,0.5);*/
+}
+.rondell-theme-default .rondell-item img{
+    background-color:#000000;
+    background:rgba(0,0,0,0.5);
+}
+
+/* light theme */
+.rondell-theme-light .rondell-item, .rondell-theme-light .rondell-item img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* dark theme, good for preset 'products' and 'gallery' */
+.rondell-theme-dark {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.rondell-theme-dark .rondell-caption {
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+.rondell-theme-dark .rondell-control {
+  font-size: 0;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+}
+
+/* page theme, good for preset 'pages' */
+.rondell-theme-page {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.rondell-theme-page .rondell-item {
+  border: 0;
+}
+.rondell-theme-page .rondell-item, .rondell-theme-page .rondell-item img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.rondell-theme-page .rondell-control {
+  font-size: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+.rondell-theme-page .rondell-control.rondell-shift-left, .rondell-theme-page .rondell-control.rondell-shift-right{
+  -webkit-border-radius: 0 3px 0 6px;
+  -moz-border-radius: 0 3px 0 6px;
+  -ms-border-radius: 0 3px 0 6px;
+  -o-border-radius: 0 3px 0 6px;
+  border-radius: 0 3px 0 6px;
+}
+.rondell-theme-page .rondell-control.rondell-shift-left {
+  background-position: 2px -14px;
+  -webkit-border-radius: 3px 0 6px 0;
+  -moz-border-radius: 3px 0 6px 0;
+  -ms-border-radius: 3px 0 6px 0;
+  -o-border-radius: 3px 0 6px 0;
+  border-radius: 3px 0 6px 0;
+}
+
+/* slider theme */
+.rondell-theme-slider {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.rondell-theme-slider .rondell-item, .rondell-theme-slider .rondell-item img {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.rondell-theme-slider .rondell-caption {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+.rondell-theme-slider .rondell-control {
+  font-size: 0;
+  color: transparent;
+  padding: 0;
+  width: 15px;
+  height: 30px;
+}
+.rondell-theme-slider .rondell-control span {
+  display: block;
+  height: 16px;
+  width: 16px;
+  margin-top: 7px;
+}
+.rondell-theme-slider .rondell-control.rondell-shift-left {
+  -webkit-border-radius: 0 15px 15px 0;
+  -moz-border-radius: 0 15px 15px 0;
+  -ms-border-radius: 0 15px 15px 0;
+  -o-border-radius: 0 15px 15px 0;
+  border-radius: 0 15px 15px 0;
+}
+.rondell-theme-slider .rondell-control.rondell-shift-right {
+  -webkit-border-radius: 15px 0 0 15px;
+  -moz-border-radius: 15px 0 0 15px;
+  -ms-border-radius: 15px 0 0 15px;
+  -o-border-radius: 15px 0 0 15px;
+  border-radius: 15px 0 0 15px;
+}

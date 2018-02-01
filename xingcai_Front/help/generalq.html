@@ -1,0 +1,329 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户中心-</title>
+    <link href="/css_new/userCenter/usercenter.css?3eda99ab3b" rel="stylesheet" />
+    <link href="/css_new/usercenter.css?ab5383d759" rel="stylesheet" />
+    <script src="/js_new/common/jquery-1.11.3.min.js?a05f16c4c4"></script>
+    <style type="text/css">
+        /*x068增加单独头部*/
+        .head { position: relative; }
+        .head .logo-wrap { margin: 0; }
+        .top-box .main { width: 100% !important; margin: 0 auto; }
+        .header-main { width: 100% !important; margin: 0 auto; }
+        .bar-left { margin-left: 20px; }
+        .logo { margin-left: 20px; }
+        .bar-right { margin-right: 20px; }
+        .top-online { margin-right: 20px; }
+        /*x068增加单独头部*/
+    </style>
+
+</head>
+<body class="bg">
+    <div class="head">
+        <div class="logo-wrap"><img src="https://zy11sbsbqt.lfjieweisi.com//content/Default/home/images/logo1.png" /></div>
+        <div class="top_menu">
+            <div class="clear">
+                <a href="/OffcialOtherGame/Index/26" id="gameListBtn" class="games" title="游戏大厅"><span>游戏大厅</span></a>
+                <a href="/" class="getout" title="返回首页"><span>返回首页</span></a>
+                <a href="http://tb.53kf.com/webCompany.php?arg=10147846&style=1&fromthirdservice=webapp" class="service" target="_blank" title="在线客服">
+                    <span class="new-msg" id="NewMsg">在线客服</span>
+                </a>
+                <a href="/Help/Betq?gameId=0" class="rule" id="Rule" title="规则说明"><i></i><span class="rule_description">规则说明</span></a>
+                <a href="/Help/Techq" class="help" title="游戏帮助"><i></i><span class="play_help">游戏帮助</span></a>
+                <a title="登出账号" class="btn-login-out" href="/Home/UserLogout"><span>登出账号</span></a>
+            </div>
+            <!--下拉游戏选择-->
+            <div class="menu-child" style="display:none;" id="lot_sec_menu">
+                <div class="gamelist clear">
+                    <div class="official_play">
+                        <div class="gamelist_tit clear">
+                            <h1 class="red_style">官方玩法</h1>
+                        </div>
+                        <div class="high_wrap">
+                            <div class="gamelist_l">
+                                <ul data-bind="foreach:official">
+                                    <li>
+                                        <a class="game_26" data-bind="attr:{href:'/OffcialOtherGame/Index/'+FGameID}"><font data-bind="text:FGameName"></font></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cut-line"></div>
+                    <div class="credit_play">
+                        <div class="gamelist_tit clear">
+                            <h1 class="orange_style">信用玩法</h1>
+                        </div>
+                        <div class="high_wrap">
+                            <div class="gamelist_r">
+                                <ul data-bind="foreach:credit">
+                                    <li>
+                                        <a class="game_1" data-bind="attr:{href:FGameID==1?'/six/index':'/OtherGame/Index/'+FGameID}"><font data-bind="text:FGameName"></font></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="triangles_back"></div>
+            </div>
+            <!--下拉游戏选择 end-->
+        </div>
+    </div>
+    <div class="container clear">
+        <style>
+            .open{
+                display: none;
+            }
+            .w-op{
+                display: none;
+            }
+        </style>
+        <div class="side-left helpMenu" id="helpMenu">
+            <ul class="side_menu">
+                <li class=active>
+                    <a href="/Help/Generalq" class="sidem_b">常见问题</a>
+                </li>
+                <li >
+                    <a href="/Help/Deposit" class="sidem_b">存款帮助</a>
+                </li>
+                <li >
+                    <a href="/Help/Teller" class="sidem_b">取款帮助</a>
+                </li>
+                <li >
+                    <a href="/Help/Techq" class="sidem_b">新手引导</a>
+                </li>
+                <li>
+                    <a class="sidem_b" onclick="showdiv()"><span>玩法介绍</span></a>
+                    <ul class="rulelist" id="show" >
+                        <li data-id="1"><a href="/Help/Betq?gameId=1"><i class="play-ico"></i><span>香港六合彩</span></a></li>
+                        <li data-id="7"><a href="/Help/Betq?gameId=7"><i class="play-ico"></i><span>重庆时时彩</span></a></li>
+                        <li data-id="9"><a href="/Help/Betq?gameId=9"><i class="play-ico"></i><span>天津时时彩</span></a></li>
+                        <li data-id="10"><a href="/Help/Betq?gameId=10"><i class="play-ico"></i><span>新疆时时彩</span></a></li>
+                        <li data-id="13"><a href="/Help/Betq?gameId=13"><i class="play-ico"></i><span>幸运农场</span></a></li>
+                        <li data-id="15"><a href="/Help/Betq?gameId=15"><i class="play-ico"></i><span>北京PK拾</span></a></li>
+                        <li data-id="26"><a href="/Help/Betq?gameId=26"><i class="play-ico official-ico"></i><span>重庆时时彩</span></a></li>
+                        <li data-id="29"><a href="/Help/Betq?gameId=29"><i class="play-ico official-ico"></i><span>北京PK拾</span></a></li>
+                        <li data-id="30"><a href="/Help/Betq?gameId=30"><i class="play-ico official-ico"></i><span>福彩3D</span></a></li>
+                        <li data-id="39"><a href="/Help/Betq?gameId=39"><i class="play-ico official-ico"></i><span>江苏快三</span></a></li>
+                        <li data-id="40"><a href="/Help/Betq?gameId=40"><i class="play-ico official-ico"></i><span>新疆时时彩</span></a></li>
+                        <li data-id="42"><a href="/Help/Betq?gameId=42"><i class="play-ico official-ico"></i><span>天津时时彩</span></a></li>
+                        <li data-id="44"><a href="/Help/Betq?gameId=44"><i class="play-ico official-ico"></i><span>排列三、五</span></a></li>
+                        <li data-id="61"><a href="/Help/Betq?gameId=61"><i class="play-ico official-ico"></i><span>加拿大3.5分</span></a></li>
+                        <li data-id="68"><a href="/Help/Betq?gameId=68"><i class="play-ico official-ico"></i><span>澳洲3分彩</span></a></li>
+                    </ul>
+                </li>
+                <li  style="display:none">
+                    <a href="/Help/about" class="sidem_b">公司简介</a>      
+                </li>
+            </ul>
+
+            <script src="/js_new/dist/$.ko.js?a876144a3a"></script>
+            <script>
+                $(function () {
+                    var games = {
+                        'ssc': [26, 40, 41, 42, 43],
+                        '11x5': [32, 45, 46],
+                        'kl8': [28],
+                        'k3': [39],
+                        'fc3d': [30],
+                        'pl35': [44],
+                        'pk10': [29],
+                        'six': [1],
+                        'jxssc': [11],
+                        'bjpks': [15],
+                        'xjssc': [10],
+                        'cqks': [13],
+                        'jstb': [22],
+                        'gd11x5': [4],
+                        'gdkc': [5],
+                        'gxks': [6],
+                        'cqssc': [7],
+                        'tjssc': [9]
+                    };
+                    var links = {};
+                    $.each(games, function (key) {
+                        $.each(this, function (index, item) {
+                            links[item] = key;
+                        });
+                    });
+                    var id = location.search.replace("?gameId=", "");
+                    var gameid = isNaN(id) ? 26 : id || 26;
+                    var $rulelist = $('ul.rulelist');
+                    var mapping = {};
+                    $rulelist.children().each(function () {
+                        mapping[$(this).data("id")] = $(this);
+                    });
+
+                    mapping[gameid] && mapping[gameid].addClass('active');
+                    $('#game-' + gameid).show();
+
+                    $rulelist.delegate('>', 'click', function () {
+                        var $this = $(this);
+                        $this.addClass('active').siblings('.active').removeClass('active');
+                        $('#game-' + $this.data('id')).show().siblings().hide();
+                        location.hash = games[$this.data('id')][0];
+                    });
+                });
+                var menuVM = function () {
+                    this.init = function (id) {
+                        this.getData();
+                        ko.applyBindings(this, $("#" + id)[0]);
+                        return this;
+                    },
+                    this.credit = ko.observableArray(),
+                    this.official = ko.observableArray(),
+                    this.isInitMenu = false,
+                    this.getData = function () {
+                        var that = this;
+                        $.ajax({
+                            url: '/home/gameinfolist',
+                            type: 'GET',
+                            dataType: 'JSON',
+                            success: function (data) {
+                                if (data.length) {
+                                    that.isInitMenu = true;
+                                    that.formatData(data);
+                                }
+                            }
+                        });
+                    },
+                    this.formatData = function (data) {
+                        var credit = [], official = [];
+                        $.each(data, function (index, value) {
+                            var len = value.GameInfoList.length;
+                            $.each(value.GameInfoList, function (i, v) {
+                                v.FGroupId == 3 ? official.push(v) : credit.push(v);
+                            });
+                        });
+                        this.credit(credit);
+                        this.official(official);
+                    }
+                };
+                var vm = new menuVM().init("lot_sec_menu");
+                var time = 0, menuBox = $('#lot_sec_menu');
+                $("#gameListBtn,#lot_sec_menu").hover(function () {
+                    menuBox.stop(true, true).slideDown(300);
+                    clearTimeout(time);
+                }, function () {
+                    time = setTimeout(function () {
+                        menuBox.stop().slideUp(100);
+                    }, 300);
+                })
+
+
+                function showdiv() {
+                    if (showdiv_display = document.getElementById('show').style.display == 'none') {
+                        document.getElementById('show').style.display = 'block';
+                    } else {
+                        document.getElementById('show').style.display = 'none';
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="ui-main clear" id="helpWord-c1">
+            <div class="con_box">
+                <div class="help-con">
+                    <div class="help-head">
+                        1 你们合法吗？
+                    </div>
+                    <div class="help-main">
+                        <p> 御都彩票是彩界后起之秀利鑫集团打造的线上彩票娱乐品牌，一期资金7000万美金以上，目标是全力打造彩界最快、最稳、服务至上为首的娱乐平台；</p><p>现御都娱乐已经获得合法牌照。主营业务范围包括在线彩票、网上娱乐项目，集团在全球各地取得政府合法授权经营开发包含有赌场的旅游度假酒店经营权、注资亚洲金融和云数据技术等高新行业领域。集团雄厚的资金和技术支撑背景，为御都彩票项目长期稳定发展保驾护航。</p>
+                    </div>
+                    <div class="help-head">
+                        2 如何保障帐号安全？
+                    </div>
+                    <div class="help-main">
+                        <p>1. 首次获得平台账户之后，请修改初始登录密码并设定账户提款密码，并且绑定您的邮箱和设定您的密保，同时绑定您需要用来充值或者提款的银行账号信息；</p><p>2. 妥善保管您的登录密码和提款密码，平时切勿相信他人以任何理由索要平台账户的登录密码及提款密码以及密保信息， 定期对电脑进行安全检查，避免电脑中病毒和木马导致账户被盗；</p><p>3. 用户输入密码错误超过5次，平台处于对用户账号的安全考虑将临时冻结，需联系客服或上级处理；</p>
+                    </div>
+                    <div class="help-head">
+                        3 为何存款不到帐？
+                    </div>
+                    <div class="help-main">
+                        <p>1. 平台填写的存款金额和网银实际汇款的金额不一致，会导致不到账；</p><p>2. 网银汇款时需要填写的附言（发起充值申请后获得的订单号/附言）填写错误或未填写；</p><p>3. 没有使用网银进行汇款（如使用银行柜台或ATM汇款无法到账）；</p><p>4. 存款时没有从平台发起存款请求或者没有使用平台最新的收款银行信息；</p><p>5. 如因用户没有使用平台的最新收款信息而汇款到旧的收款银行账号而导致资金损失，须由用户自行承担；</p><p>6. 充值超过15分钟未到账请咨询在线客服，并提供平台用户名及汇款详情单（包含汇款人姓名、卡号、汇款具体时间及金额）；</p><p>7. 充值时间在平台服务时间外或银行系统维护时。</p>
+                    </div>
+                    <div class="help-head">
+                        4 平台对于提款有何规定？
+                    </div>
+                    <div class="help-main">
+                        <p>1. 对于新开的用户需要自开户6小时后方可发起提款；</p><p>2. 新增银行卡（含新增，修改）24个小时后方可发起提款；</p><p>3. 存款后总投注额小于总存款额60%的提款将不予受理，提款金额将退回用户平台账户。</p>
+                    </div>
+                    <div class="help-head">
+                        5 如何投注？
+                    </div>
+                    <div class="help-main">
+                        <p>请您按以下提示进行操作投注：</p><p>&nbsp;&nbsp;a)选择彩种和玩法，玩法组标签可以来回相互切换，然后选择不同的玩法；</p><p>&nbsp;&nbsp;b)根据各个玩法规则，选择或者输入要购买的号码；</p><p>&nbsp;&nbsp;c)然后根据需要选择投注倍数、元角等模式和奖金返点设置；</p><p>&nbsp;&nbsp;d)确认选择的号码，然后点击“确认选号”，把当前投注内容加入到投注项中，然后可以重复""a""到""d""，以添加不同玩法的不同投注内容到投注项中；</p>
+                    </div>
+                    <div class="help-head">
+                        6 为什么我无法进行游戏撤单？
+                    </div>
+                    <div class="help-main">
+                        <p>若您想要撤单，需要在当期销售截止之前进行撤单。如果当期已经截止销售，那么将无法再进行撤单操作；</p><p>1. 任何彩种的撤单都必须在该奖期停止投注之前进行操作，当期投注时间截止后该投注单将无法再进行撤单操作；</p><p>2. 在投注页面下方的游戏记录可以进行撤单操作；</p>
+                    </div>
+                    <div class="help-head">
+                        7 投注记录-购彩查询
+                    </div>
+                    <div class="help-main">
+                        <p>&nbsp;&nbsp;用户中心&gt;投注记录&gt;购彩查询,设定自已查询条可以查看到投注记录,同时点注单编号可以查询到详细的注单内容。</p>
+                    </div>
+                    <div class="help-head">
+                        8 投注记录&gt;追号查询
+                    </div>
+                    <div class="help-main">
+                        <p>&nbsp;&nbsp;和购彩查询类似，默认不显示任何追号记录，需要在选择查询条件以后，点击搜索才能查询追号记录，在查询出的记录结果里，点击追号内容栏的“详细号码”，可以在当页浮动显示出该追号记录所选择的号码，点击追号编号会新打开一个追号详情窗口，在追号详情中可以对销售未截止或者未开始的奖期进行撤消追号处理。</p>
+                    </div>
+                    <div class="help-head">
+                        9 什么是“奖金限额”？平台奖金限额是多少？
+                    </div>
+                    <div class="help-main">
+                        <p>1. 每个账号在同一游戏、同一玩法、同一奖期中购买相同号码的最大可中奖金额；</p><p>2. 高频彩（时时彩、时时乐、11选5）的奖金限额50万（官彩玩法和信用玩法单期总共可中奖金额最高为50万），低频彩（3D、排列三/五）的奖金限额50万。</p>
+                    </div>
+                    <div class="help-head">
+                        10 什么是动态奖金返点？
+                    </div>
+                    <div class="help-main">
+                        <p>&nbsp;&nbsp;在投注的时候，会有个“选择奖金返点”，即动态奖金返点。动态奖金返点是根据用户自身的返点，然后利用舍弃返点，来提高中奖金额的一种模式，比如您重庆时时彩的前三直选的奖金是1800，返点是7%，那么在投注的时候可以选择动态奖金1960，返点0%。这种情况下如果您中奖，那么奖金便是1960.</p>
+                    </div>
+                    <div class="help-head">
+                        11 关于第3方开奖机构不开奖问题？
+                    </div>
+                    <div class="help-main">
+                        <p>1. 所有游戏，如遇第3方开奖机构不开奖，平台会对未获得开奖号码的期数进行撤单返款；</p><p>2. 撤单后无论第三方以任何形式补开，平台均维持撤单处理。</p>
+                    </div>
+                    <div class="help-head">
+                        12 无法绑定银行卡的原因：
+                    </div>
+                    <div class="help-main">
+                        <p>1.您的这张银行卡在之前是否被绑定过（不可以重复绑定）；</p><p>2.您的开户人姓名是否与已绑定的银行卡开户人是一样的；</p><p>3.点击“绑定银行卡”后的第一步是验证已经绑定在平台上的银行卡，这一步需要输入的是已绑定的银行卡信息，不是新绑定的银行卡信息；</p><p>4.您填写的银行卡不正确。</p>
+                    </div>
+                    <div class="help-head">
+                        13 如何查询账变？
+                    </div>
+                    <div class="help-main">
+                        <p>登陆账户后，进入“报表管理”后点击“账变报表”，即可以查看到您所有的存提款和账变记录。如只需要查看存提款记录，也可只进入“报表管理”点击“线上支付”或“公司入款”进行查看。</p>
+                    </div>
+                    <div class="help-head">
+                        14 如何查询报表盈亏？
+                    </div>
+                    <div class="help-main">
+                        <p>登陆账户后，进入“报表管理”，点击“个人报表”，设定时间范围以及游戏，点击“查询”即可查询到您在设定时间段的销售及返点总额，以及总的盈亏。</p>
+                    </div>
+                    <div class="help-head">
+                        15 单挑规则说明？
+                    </div>
+                    <div class="help-main">
+                        <p>投注的中奖概率低于或等于1％的均为单挑模式。例如：1)[五星直选]1000注及以内，[四星直选]100注及以内，[三星直选]10注及以内，[二星直选]4注及以内，[五星组选120]10注及以内，[五星组选60]20注及以内，[五星组选30]35注及以内，[五星组选20]50注及以内，[五星组选10]90注及以内，[五星组选5]90注及以内，[四星组选24]5注及以内，[四星组选12]10注及以内，[四星组选6]20注及以内，[四星组选4]25注及以内，会员单挑同期同一玩法同一位置，中奖利润最高30000元，超出的利润将进行扣除,多个相同单挑注单的同一位置也最多只派奖30000元;2)[三星组六]2注及以内，[三星组三]4注及以内，[二星组选]2注及以内......等等,会员单挑同期同一玩法同一位置，中奖利润最高20000元，超出的利润将进行扣除,多个相同单挑注单的同一位置也最多只派奖20000元。3)平台六合彩以下玩法设为单挑模式,连码三全中,特串,连肖五肖,均列为单挑模式,单挑模式每期单笔奖金最高限额10W元,超过将按10W元反还.如有疑问请联系我们的在线客服进行咨询，谢谢！</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
